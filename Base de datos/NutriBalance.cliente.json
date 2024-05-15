@@ -1,0 +1,604 @@
+[{
+  "_id": {
+    "$oid": "66448de064d2dcda28da261e"
+  },
+  "nombre": "Ana Torres",
+  "email": "anatorres@example.com",
+  "telefono": 987654321,
+  "fechaNacimiento": "1992-01-01",
+  "género": "F",
+  "nutricionista": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "valorNutricionalRec": {
+    "calorias": 2000,
+    "proteina": 50,
+    "grasa": 70,
+    "carbohidratos": 300,
+    "sal": 5,
+    "azucar": 25
+  },
+  "preferenciasDashboard": {
+    "idioma": "es",
+    "zonaHoraria": "GMT-5",
+    "temaInterfaz": "claro",
+    "undMedida": "métrico",
+    "componenteDahboard": [
+      "calendario",
+      "progreso"
+    ]
+  },
+  "fotos": {
+    "inicio": "https://example.com/foto1.jpg",
+    "mes1": "https://example.com/foto2.jpg"
+  },
+  "progreso": [
+    {
+      "id": "1",
+      "fecha": "2021-01-01",
+      "peso": 85,
+      "medidas": {
+        "cintura": 80,
+        "cadera": 90
+      },
+      "actividadFisica": [
+        "correr",
+        "nadar"
+      ],
+      "objetivo": "perder peso",
+      "objetivoPeso": 75,
+      "notas": [
+        "buena semana",
+        "mantener la dieta"
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2662"
+  },
+  "nombre": "Ana García",
+  "email": "ana.garcia@example.com",
+  "telefono": 123456789,
+  "fechaNacimiento": "1990-04-12",
+  "genero": "F",
+  "nutricionista": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "valorNutricional": {
+    "calorias": 2000,
+    "proteina": 50,
+    "grasa": 70,
+    "carbohidratos": 300,
+    "sal": 5,
+    "azucar": 25
+  },
+  "preferenciasDashboard": {
+    "idioma": "es",
+    "zonaHoraria": "GMT-5",
+    "temaInterfaz": "oscuro",
+    "undMedida": "métrico",
+    "componenteDashboard": [
+      "calendario",
+      "progreso"
+    ]
+  },
+  "fotos": {
+    "inicio": "https://example.com/foto_ana_inicio.jpg",
+    "mes1": "https://example.com/foto_ana_mes1.jpg"
+  },
+  "progreso": [
+    {
+      "fecha": "2021-01-01",
+      "peso": 70,
+      "medidas": {
+        "cintura": 80,
+        "cadera": 90
+      },
+      "actividadFisica": [
+        "correr",
+        "nadar"
+      ],
+      "objetivo": "perder peso",
+      "notas": [
+        "buena semana",
+        "mantener la dieta"
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2663"
+  },
+  "nombre": "Carlos Martínez",
+  "email": "carlos.martinez@example.com",
+  "telefono": 987654321,
+  "fechaNacimiento": "1985-07-22",
+  "genero": "M",
+  "nutricionista": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "valorNutricional": {
+    "calorias": 2500,
+    "proteina": 60,
+    "grasa": 80,
+    "carbohidratos": 350,
+    "sal": 6,
+    "azucar": 30
+  },
+  "preferenciasDashboard": {
+    "idioma": "en",
+    "zonaHoraria": "GMT-4",
+    "temaInterfaz": "claro",
+    "undMedida": "imperial",
+    "componenteDashboard": [
+      "calendario",
+      "progreso",
+      "notificaciones"
+    ]
+  },
+  "fotos": {
+    "inicio": "https://example.com/foto_carlos_inicio.jpg",
+    "mes1": "https://example.com/foto_carlos_mes1.jpg"
+  },
+  "progreso": [
+    {
+      "fecha": "2021-02-01",
+      "peso": 85,
+      "medidas": {
+        "cintura": 90,
+        "cadera": 100
+      },
+      "actividadFisica": [
+        "levantamiento de pesas"
+      ],
+      "objetivo": "ganar músculo",
+      "notas": [
+        "entrenamiento intenso",
+        "aumentar proteína"
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2664"
+  },
+  "nombre": "Maria Johnson",
+  "email": "maria.johnson@example.com",
+  "telefono": 456789123,
+  "fechaNacimiento": "1992-11-05",
+  "genero": "F",
+  "nutricionista": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "valorNutricional": {
+    "calorias": 2200,
+    "proteina": 55,
+    "grasa": 75,
+    "carbohidratos": 320,
+    "sal": 5.5,
+    "azucar": 28
+  },
+  "preferenciasDashboard": {
+    "idioma": "es",
+    "zonaHoraria": "GMT-3",
+    "temaInterfaz": "oscuro",
+    "undMedida": "métrico",
+    "componenteDashboard": [
+      "calendario",
+      "progreso",
+      "metas"
+    ]
+  },
+  "fotos": {
+    "inicio": "https://example.com/foto_maria_inicio.jpg",
+    "mes1": "https://example.com/foto_maria_mes1.jpg"
+  },
+  "progreso": [
+    {
+      "fecha": "2021-03-01",
+      "peso": 68,
+      "medidas": {
+        "cintura": 75,
+        "cadera": 88
+      },
+      "actividadFisica": [
+        "yoga",
+        "pilates"
+      ],
+      "objetivo": "mantener peso",
+      "notas": [
+        "clases de yoga",
+        "dieta equilibrada"
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2665"
+  },
+  "nombre": "Pedro López",
+  "email": "pedro.lopez@example.com",
+  "telefono": 345678912,
+  "fechaNacimiento": "1988-03-14",
+  "genero": "M",
+  "nutricionista": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "valorNutricional": {
+    "calorias": 2400,
+    "proteina": 65,
+    "grasa": 85,
+    "carbohidratos": 330,
+    "sal": 5.8,
+    "azucar": 26
+  },
+  "preferenciasDashboard": {
+    "idioma": "es",
+    "zonaHoraria": "GMT-6",
+    "temaInterfaz": "claro",
+    "undMedida": "métrico",
+    "componenteDashboard": [
+      "calendario",
+      "progreso",
+      "dietas"
+    ]
+  },
+  "fotos": {
+    "inicio": "https://example.com/foto_pedro_inicio.jpg",
+    "mes1": "https://example.com/foto_pedro_mes1.jpg"
+  },
+  "progreso": [
+    {
+      "fecha": "2021-04-01",
+      "peso": 78,
+      "medidas": {
+        "cintura": 85,
+        "cadera": 95
+      },
+      "actividadFisica": [
+        "bicicleta",
+        "nadar"
+      ],
+      "objetivo": "mejorar resistencia",
+      "notas": [
+        "entrenamiento diario",
+        "hidratarse bien"
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2666"
+  },
+  "nombre": "Elena Sánchez",
+  "email": "elena.sanchez@example.com",
+  "telefono": 234567891,
+  "fechaNacimiento": "1995-06-17",
+  "genero": "F",
+  "nutricionista": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "valorNutricional": {
+    "calorias": 1900,
+    "proteina": 45,
+    "grasa": 65,
+    "carbohidratos": 290,
+    "sal": 4.5,
+    "azucar": 20
+  },
+  "preferenciasDashboard": {
+    "idioma": "en",
+    "zonaHoraria": "GMT-7",
+    "temaInterfaz": "oscuro",
+    "undMedida": "imperial",
+    "componenteDashboard": [
+      "calendario",
+      "progreso",
+      "mensajes"
+    ]
+  },
+  "fotos": {
+    "inicio": "https://example.com/foto_elena_inicio.jpg",
+    "mes1": "https://example.com/foto_elena_mes1.jpg"
+  },
+  "progreso": [
+    {
+      "fecha": "2021-05-01",
+      "peso": 65,
+      "medidas": {
+        "cintura": 70,
+        "cadera": 85
+      },
+      "actividadFisica": [
+        "correr",
+        "gimnasia"
+      ],
+      "objetivo": "mejorar tonificación",
+      "notas": [
+        "correr 5 km",
+        "entrenamiento de fuerza"
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2667"
+  },
+  "nombre": "Liam Brown",
+  "email": "liam.brown@example.com",
+  "telefono": 876543210,
+  "fechaNacimiento": "1991-09-23",
+  "genero": "M",
+  "nutricionista": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "valorNutricional": {
+    "calorias": 2600,
+    "proteina": 70,
+    "grasa": 90,
+    "carbohidratos": 340,
+    "sal": 6.5,
+    "azucar": 35
+  },
+  "preferenciasDashboard": {
+    "idioma": "en",
+    "zonaHoraria": "GMT+1",
+    "temaInterfaz": "claro",
+    "undMedida": "imperial",
+    "componenteDashboard": [
+      "calendario",
+      "progreso",
+      "metas"
+    ]
+  },
+  "fotos": {
+    "inicio": "https://example.com/foto_liam_inicio.jpg",
+    "mes1": "https://example.com/foto_liam_mes1.jpg"
+  },
+  "progreso": [
+    {
+      "fecha": "2021-06-01",
+      "peso": 82,
+      "medidas": {
+        "cintura": 92,
+        "cadera": 102
+      },
+      "actividadFisica": [
+        "levantamiento de pesas",
+        "correr"
+      ],
+      "objetivo": "ganar músculo",
+      "notas": [
+        "aumentar ingesta de proteína",
+        "entrenamiento diario"
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2668"
+  },
+  "nombre": "Isabella Rossi",
+  "email": "isabella.rossi@example.com",
+  "telefono": 567891234,
+  "fechaNacimiento": "1993-08-13",
+  "genero": "F",
+  "nutricionista": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "valorNutricional": {
+    "calorias": 2100,
+    "proteina": 55,
+    "grasa": 70,
+    "carbohidratos": 310,
+    "sal": 5.2,
+    "azucar": 27
+  },
+  "preferenciasDashboard": {
+    "idioma": "it",
+    "zonaHoraria": "GMT+2",
+    "temaInterfaz": "oscuro",
+    "undMedida": "métrico",
+    "componenteDashboard": [
+      "calendario",
+      "progreso",
+      "recetas"
+    ]
+  },
+  "fotos": {
+    "inicio": "https://example.com/foto_isabella_inicio.jpg",
+    "mes1": "https://example.com/foto_isabella_mes1.jpg"
+  },
+  "progreso": [
+    {
+      "fecha": "2021-07-01",
+      "peso": 72,
+      "medidas": {
+        "cintura": 78,
+        "cadera": 88
+      },
+      "actividadFisica": [
+        "pilates",
+        "ciclismo"
+      ],
+      "objetivo": "mejorar flexibilidad",
+      "notas": [
+        "clases de pilates",
+        "salidas en bicicleta"
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2669"
+  },
+  "nombre": "Santiago Torres",
+  "email": "santiago.torres@example.com",
+  "telefono": 654321098,
+  "fechaNacimiento": "1987-12-11",
+  "genero": "M",
+  "nutricionista": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "valorNutricional": {
+    "calorias": 2300,
+    "proteina": 60,
+    "grasa": 75,
+    "carbohidratos": 320,
+    "sal": 5.7,
+    "azucar": 29
+  },
+  "preferenciasDashboard": {
+    "idioma": "es",
+    "zonaHoraria": "GMT-8",
+    "temaInterfaz": "claro",
+    "undMedida": "métrico",
+    "componenteDashboard": [
+      "calendario",
+      "progreso",
+      "metas"
+    ]
+  },
+  "fotos": {
+    "inicio": "https://example.com/foto_santiago_inicio.jpg",
+    "mes1": "https://example.com/foto_santiago_mes1.jpg"
+  },
+  "progreso": [
+    {
+      "fecha": "2021-08-01",
+      "peso": 80,
+      "medidas": {
+        "cintura": 88,
+        "cadera": 98
+      },
+      "actividadFisica": [
+        "crossfit",
+        "correr"
+      ],
+      "objetivo": "mejorar rendimiento",
+      "notas": [
+        "entrenamientos de alta intensidad",
+        "dieta rica en proteínas"
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da266a"
+  },
+  "nombre": "Lucía Fernández",
+  "email": "lucia.fernandez@example.com",
+  "telefono": 789123456,
+  "fechaNacimiento": "1994-10-30",
+  "genero": "F",
+  "nutricionista": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "valorNutricional": {
+    "calorias": 1800,
+    "proteina": 48,
+    "grasa": 65,
+    "carbohidratos": 280,
+    "sal": 4.2,
+    "azucar": 22
+  },
+  "preferenciasDashboard": {
+    "idioma": "es",
+    "zonaHoraria": "GMT-9",
+    "temaInterfaz": "oscuro",
+    "undMedida": "métrico",
+    "componenteDashboard": [
+      "calendario",
+      "progreso",
+      "mensajes"
+    ]
+  },
+  "fotos": {
+    "inicio": "https://example.com/foto_lucia_inicio.jpg",
+    "mes1": "https://example.com/foto_lucia_mes1.jpg"
+  },
+  "progreso": [
+    {
+      "fecha": "2021-09-01",
+      "peso": 62,
+      "medidas": {
+        "cintura": 68,
+        "cadera": 82
+      },
+      "actividadFisica": [
+        "zumba",
+        "correr"
+      ],
+      "objetivo": "mejorar resistencia cardiovascular",
+      "notas": [
+        "clases de zumba",
+        "aumentar kilómetros de carrera"
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da266b"
+  },
+  "nombre": "Emma Müller",
+  "email": "emma.muller@example.com",
+  "telefono": 890123456,
+  "fechaNacimiento": "1996-02-17",
+  "genero": "F",
+  "nutricionista": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "valorNutricional": {
+    "calorias": 2000,
+    "proteina": 50,
+    "grasa": 70,
+    "carbohidratos": 300,
+    "sal": 5,
+    "azucar": 25
+  },
+  "preferenciasDashboard": {
+    "idioma": "de",
+    "zonaHoraria": "GMT+1",
+    "temaInterfaz": "oscuro",
+    "undMedida": "métrico",
+    "componenteDashboard": [
+      "calendario",
+      "progreso",
+      "metas"
+    ]
+  },
+  "fotos": {
+    "inicio": "https://example.com/foto_emma_inicio.jpg",
+    "mes1": "https://example.com/foto_emma_mes1.jpg"
+  },
+  "progreso": [
+    {
+      "fecha": "2021-10-01",
+      "peso": 68,
+      "medidas": {
+        "cintura": 76,
+        "cadera": 90
+      },
+      "actividadFisica": [
+        "yoga",
+        "ciclismo"
+      ],
+      "objetivo": "mantener peso",
+      "notas": [
+        "clases de yoga",
+        "andar en bicicleta"
+      ]
+    }
+  ]
+}]

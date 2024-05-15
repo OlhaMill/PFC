@@ -1,0 +1,208 @@
+[{
+  "_id": {
+    "$oid": "66448e6964d2dcda28da2628"
+  },
+  "clienteId": {
+    "$oid": "66448de064d2dcda28da261e"
+  },
+  "usuarioId": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "fechaHora": "2023-01-10T10:00:00Z",
+  "notas": "Revisión inicial, establecimiento de objetivos."
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2670"
+  },
+  "clienteId": {
+    "$oid": "66448e2a64d2dcda28da2662"
+  },
+  "usuarioId": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "fechaHora": "2023-01-10T10:00:00Z",
+  "notas": "Revisión inicial, establecimiento de objetivos."
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2671"
+  },
+  "clienteId": {
+    "$oid": "66448e2a64d2dcda28da2663"
+  },
+  "usuarioId": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "fechaHora": "2023-02-15T11:30:00Z",
+  "notas": "Ajuste de dieta y revisión de progreso."
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2672"
+  },
+  "clienteId": {
+    "$oid": "66448e2a64d2dcda28da2664"
+  },
+  "usuarioId": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "fechaHora": "2023-03-20T09:00:00Z",
+  "notas": "Revisión de metas y ajustes en plan nutricional."
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2673"
+  },
+  "clienteId": {
+    "$oid": "66448e2a64d2dcda28da2665"
+  },
+  "usuarioId": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "fechaHora": "2023-04-25T13:45:00Z",
+  "notas": "Seguimiento mensual, cambios en la rutina de ejercicios."
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2674"
+  },
+  "clienteId": {
+    "$oid": "66448e2a64d2dcda28da2666"
+  },
+  "usuarioId": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "fechaHora": "2023-05-05T15:00:00Z",
+  "notas": "Evaluación del progreso y revisión de dieta."
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2675"
+  },
+  "clienteId": {
+    "$oid": "66448e2a64d2dcda28da2667"
+  },
+  "usuarioId": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "fechaHora": "2023-06-12T16:30:00Z",
+  "notas": "Discusión sobre suplementos y ajustes en el plan de entrenamiento."
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2676"
+  },
+  "clienteId": {
+    "$oid": "66448e2a64d2dcda28da2668"
+  },
+  "usuarioId": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "fechaHora": "2023-07-19T14:00:00Z",
+  "notas": "Revisión de resultados de laboratorio y ajustes en la dieta."
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2677"
+  },
+  "clienteId": {
+    "$oid": "66448e2a64d2dcda28da2669"
+  },
+  "usuarioId": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "fechaHora": "2023-08-08T10:00:00Z",
+  "notas": "Evaluación de la condición física y plan de ejercicios."
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2678"
+  },
+  "clienteId": {
+    "$oid": "66448e2a64d2dcda28da266a"
+  },
+  "usuarioId": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "fechaHora": "2023-09-14T11:00:00Z",
+  "notas": "Revisión trimestral, establecimiento de nuevas metas."
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2679"
+  },
+  "clienteId": {
+    "$oid": "66448e2a64d2dcda28da266b"
+  },
+  "usuarioId": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "fechaHora": "2023-10-22T13:30:00Z",
+  "notas": "Consulta de seguimiento y ajustes en la rutina."
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2680"
+  },
+  "clienteId": {
+    "$oid": "66448e2a64d2dcda28da2662"
+  },
+  "usuarioId": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "fechaHora": "2023-11-05T14:00:00Z",
+  "notas": "Evaluación de progreso y planificación de la siguiente fase."
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2681"
+  },
+  "clienteId": {
+    "$oid": "66448e2a64d2dcda28da2663"
+  },
+  "usuarioId": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "fechaHora": "2023-12-01T09:00:00Z",
+  "notas": "Revisión de hábitos alimenticios y ajustes en la dieta."
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2682"
+  },
+  "clienteId": {
+    "$oid": "66448e2a64d2dcda28da2664"
+  },
+  "usuarioId": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "fechaHora": "2024-01-10T10:30:00Z",
+  "notas": "Consulta de seguimiento y evaluación de resultados."
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2683"
+  },
+  "clienteId": {
+    "$oid": "66448e2a64d2dcda28da2665"
+  },
+  "usuarioId": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "fechaHora": "2024-02-15T11:00:00Z",
+  "notas": "Revisión de progreso y establecimiento de nuevas metas."
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2684"
+  },
+  "clienteId": {
+    "$oid": "66448e2a64d2dcda28da2666"
+  },
+  "usuarioId": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "fechaHora": "2024-03-20T12:00:00Z",
+  "notas": "Evaluación de la dieta actual y ajustes necesarios."
+}]

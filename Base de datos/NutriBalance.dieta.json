@@ -1,0 +1,1001 @@
+[{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2685"
+  },
+  "nombre": "Dieta Balanceada para Ana",
+  "recetas": [
+    {
+      "dia": "Lunes",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2649"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2657"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2646"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2656"
+      }
+    },
+    {
+      "dia": "Martes",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da264a"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2657"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2649"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2655"
+      }
+    },
+    {
+      "dia": "Miércoles",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2649"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2646"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2647"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2653"
+      }
+    },
+    {
+      "dia": "Jueves",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2657"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2649"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2646"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da264f"
+      }
+    },
+    {
+      "dia": "Viernes",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2647"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2657"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2646"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2650"
+      }
+    },
+    {
+      "dia": "Sábado",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da264a"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2649"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2646"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2654"
+      }
+    },
+    {
+      "dia": "Domingo",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2657"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2646"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2647"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2651"
+      }
+    }
+  ],
+  "descripcion": "Dieta personalizada para Ana García con enfoque en balance nutricional.",
+  "clientes": [
+    {
+      "$oid": "66448e2a64d2dcda28da2662"
+    }
+  ],
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2686"
+  },
+  "nombre": "Dieta Alta en Proteínas para Carlos",
+  "recetas": [
+    {
+      "dia": "Lunes",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2646"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2647"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da264a"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2650"
+      }
+    },
+    {
+      "dia": "Martes",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2647"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2646"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da264a"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da264f"
+      }
+    },
+    {
+      "dia": "Miércoles",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da264a"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2647"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2646"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2654"
+      }
+    },
+    {
+      "dia": "Jueves",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2646"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da264a"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2647"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2653"
+      }
+    },
+    {
+      "dia": "Viernes",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2647"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2646"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da264a"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2651"
+      }
+    },
+    {
+      "dia": "Sábado",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da264a"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2647"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2646"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2654"
+      }
+    },
+    {
+      "dia": "Domingo",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2646"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da264a"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2647"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2650"
+      }
+    }
+  ],
+  "descripcion": "Dieta alta en proteínas para Carlos Martínez, enfocada en ganancia muscular.",
+  "clientes": [
+    {
+      "$oid": "66448e2a64d2dcda28da2663"
+    }
+  ],
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2687"
+  },
+  "nombre": "Dieta Vegetariana para Maria",
+  "recetas": [
+    {
+      "dia": "Lunes",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2650"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2651"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2654"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da264f"
+      }
+    },
+    {
+      "dia": "Martes",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2651"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2650"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2654"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2653"
+      }
+    },
+    {
+      "dia": "Miércoles",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2650"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2651"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2654"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2655"
+      }
+    },
+    {
+      "dia": "Jueves",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2651"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2650"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2654"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da264f"
+      }
+    },
+    {
+      "dia": "Viernes",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2650"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2651"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2654"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2653"
+      }
+    },
+    {
+      "dia": "Sábado",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2651"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2650"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2654"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2650"
+      }
+    },
+    {
+      "dia": "Domingo",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2650"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2651"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2654"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da264f"
+      }
+    }
+  ],
+  "descripcion": "Dieta vegetariana para Maria Johnson, enfocada en mantener el peso.",
+  "clientes": [
+    {
+      "$oid": "66448e2a64d2dcda28da2664"
+    }
+  ],
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2688"
+  },
+  "nombre": "Dieta para Resistencia para Pedro",
+  "recetas": [
+    {
+      "dia": "Lunes",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da264c"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da264e"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da265d"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2659"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2653"
+      }
+    },
+    {
+      "dia": "Martes",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da264e"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da264c"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da265d"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2659"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da264f"
+      }
+    },
+    {
+      "dia": "Miércoles",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da264c"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da264e"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da265d"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2659"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2650"
+      }
+    },
+    {
+      "dia": "Jueves",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da264e"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da264c"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da265d"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2659"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2653"
+      }
+    },
+    {
+      "dia": "Viernes",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da264c"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da264e"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da265d"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2659"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2654"
+      }
+    },
+    {
+      "dia": "Sábado",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da264e"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da264c"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da265d"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2659"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2650"
+      }
+    },
+    {
+      "dia": "Domingo",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da264c"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da264e"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da265d"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2659"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2653"
+      }
+    }
+  ],
+  "descripcion": "Dieta personalizada para mejorar la resistencia de Pedro López.",
+  "clientes": [
+    {
+      "$oid": "66448e2a64d2dcda28da2665"
+    }
+  ],
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2689"
+  },
+  "nombre": "Dieta para Tonificación para Elena",
+  "recetas": [
+    {
+      "dia": "Lunes",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2653"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2654"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2656"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da264f"
+      }
+    },
+    {
+      "dia": "Martes",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2654"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2653"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2656"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2650"
+      }
+    },
+    {
+      "dia": "Miércoles",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2653"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2654"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2656"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2651"
+      }
+    },
+    {
+      "dia": "Jueves",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2654"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2653"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2656"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2654"
+      }
+    },
+    {
+      "dia": "Viernes",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2653"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2654"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2656"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da264f"
+      }
+    },
+    {
+      "dia": "Sábado",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2654"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2653"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2656"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2651"
+      }
+    },
+    {
+      "dia": "Domingo",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2653"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2654"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2656"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2650"
+      }
+    }
+  ],
+  "descripcion": "Dieta enfocada en tonificación muscular para Elena Sánchez.",
+  "clientes": [
+    {
+      "$oid": "66448e2a64d2dcda28da2666"
+    }
+  ],
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2690"
+  },
+  "nombre": "Dieta para Ganancia de Masa para Liam",
+  "recetas": [
+    {
+      "dia": "Lunes",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2659"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2660"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2661"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da264f"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2654"
+      }
+    },
+    {
+      "dia": "Martes",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2660"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2659"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2661"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da264f"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2653"
+      }
+    },
+    {
+      "dia": "Miércoles",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2659"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2660"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2661"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da264f"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2655"
+      }
+    },
+    {
+      "dia": "Jueves",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2660"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2659"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2661"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da264f"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2654"
+      }
+    },
+    {
+      "dia": "Viernes",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2659"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2660"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2661"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da264f"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2653"
+      }
+    },
+    {
+      "dia": "Sábado",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2660"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2659"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2661"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da264f"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2655"
+      }
+    },
+    {
+      "dia": "Domingo",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da2659"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da2660"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2661"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da264f"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2653"
+      }
+    }
+  ],
+  "descripcion": "Dieta alta en calorías para ganancia de masa muscular para Liam Brown.",
+  "clientes": [
+    {
+      "$oid": "66448e2a64d2dcda28da2667"
+    }
+  ],
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2691"
+  },
+  "nombre": "Dieta Mediterránea para Isabella",
+  "recetas": [
+    {
+      "dia": "Lunes",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da265b"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da265a"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2658"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2659"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2654"
+      }
+    },
+    {
+      "dia": "Martes",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da265a"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da265b"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2658"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2659"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2650"
+      }
+    },
+    {
+      "dia": "Miércoles",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da265b"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da265a"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2658"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2659"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2653"
+      }
+    },
+    {
+      "dia": "Jueves",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da265a"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da265b"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2658"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2659"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2654"
+      }
+    },
+    {
+      "dia": "Viernes",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da265b"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da265a"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2658"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2659"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2653"
+      }
+    },
+    {
+      "dia": "Sábado",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da265a"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da265b"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2658"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2659"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2650"
+      }
+    },
+    {
+      "dia": "Domingo",
+      "desayuno": {
+        "$oid": "6644916764d2dcda28da265b"
+      },
+      "almuerzo": {
+        "$oid": "6644916764d2dcda28da265a"
+      },
+      "comida": {
+        "$oid": "6644916764d2dcda28da2658"
+      },
+      "merienda": {
+        "$oid": "6644916764d2dcda28da2659"
+      },
+      "cena": {
+        "$oid": "6644916764d2dcda28da2653"
+      }
+    }
+  ],
+  "descripcion": "Dieta mediterránea para Isabella Rossi, enfocada en mejorar la flexibilidad y la salud general.",
+  "clientes": [
+    {
+      "$oid": "66448e2a64d2dcda28da2668"
+    }
+  ],
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+}]

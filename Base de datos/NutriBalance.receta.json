@@ -1,0 +1,629 @@
+[{
+  "_id": {
+    "$oid": "6644959964d2dcda28da2662"
+  },
+  "nombre": "Ensalada de Pollo",
+  "ingredientes": [
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2646"
+      },
+      "cantidad": 200
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2647"
+      },
+      "cantidad": 100
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da264a"
+      },
+      "cantidad": 50
+    }
+  ],
+  "instrucciones": [
+    "Cortar el pollo en tiras.",
+    "Saltear el pollo en una sartén hasta que esté cocido.",
+    "Mezclar la espinaca y el tomate en un bol.",
+    "Agregar el pollo salteado a la mezcla de vegetales."
+  ],
+  "valorNutricional": {
+    "calorias": 350,
+    "proteina": 30,
+    "grasa": 10,
+    "carbohidratos": 20,
+    "sal": 0.5,
+    "azucar": 5
+  },
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "foto": "https://gvaedu-my.sharepoint.com/:u:/g/personal/olhmil_alu_edu_gva_es/EQSex2F4lbJLuj1oOz9kpbEBdjxXxI314U7BdME5SEuHlQ?e=PYsl6R",
+  "dificultad": 2,
+  "tiempoPreparacion": 20
+},
+{
+  "_id": {
+    "$oid": "6644959964d2dcda28da2663"
+  },
+  "nombre": "Batido de Fresas y Plátano",
+  "ingredientes": [
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2645"
+      },
+      "cantidad": 100
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2654"
+      },
+      "cantidad": 150
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2653"
+      },
+      "cantidad": 200
+    }
+  ],
+  "instrucciones": [
+    "Pelar el plátano.",
+    "Lavar las fresas.",
+    "Mezclar todos los ingredientes en una licuadora.",
+    "Licuar hasta obtener una mezcla homogénea."
+  ],
+  "valorNutricional": {
+    "calorias": 250,
+    "proteina": 8,
+    "grasa": 5,
+    "carbohidratos": 45,
+    "sal": 0.1,
+    "azucar": 35
+  },
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "foto": "https://example.com/batido_fresas_platano.jpg",
+  "dificultad": 1,
+  "tiempoPreparacion": 10
+},
+{
+  "_id": {
+    "$oid": "6644959964d2dcda28da2664"
+  },
+  "nombre": "Arroz con Brócoli y Pollo",
+  "ingredientes": [
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2646"
+      },
+      "cantidad": 200
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da264c"
+      },
+      "cantidad": 100
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da264e"
+      },
+      "cantidad": 50
+    }
+  ],
+  "instrucciones": [
+    "Cocinar el arroz según las instrucciones del paquete.",
+    "Saltear el pollo en una sartén hasta que esté cocido.",
+    "Agregar el brócoli a la sartén y cocinar hasta que esté tierno.",
+    "Mezclar el arroz cocido con el pollo y el brócoli."
+  ],
+  "valorNutricional": {
+    "calorias": 400,
+    "proteina": 35,
+    "grasa": 8,
+    "carbohidratos": 50,
+    "sal": 0.5,
+    "azucar": 2
+  },
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "foto": "https://example.com/arroz_brocoli_pollo.jpg",
+  "dificultad": 3,
+  "tiempoPreparacion": 30
+},
+{
+  "_id": {
+    "$oid": "6644959964d2dcda28da2665"
+  },
+  "nombre": "Tostadas de Aguacate y Huevo",
+  "ingredientes": [
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2649"
+      },
+      "cantidad": 100
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "cantidad": 100
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2656"
+      },
+      "cantidad": 5
+    }
+  ],
+  "instrucciones": [
+    "Tostar el pan.",
+    "Cocinar los huevos al gusto.",
+    "Triturar el aguacate y untarlo sobre el pan tostado.",
+    "Colocar el huevo cocido sobre el aguacate.",
+    "Agregar sal y ajo al gusto."
+  ],
+  "valorNutricional": {
+    "calorias": 350,
+    "proteina": 15,
+    "grasa": 25,
+    "carbohidratos": 20,
+    "sal": 0.5,
+    "azucar": 1
+  },
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "foto": "https://example.com/tostadas_aguacate_huevo.jpg",
+  "dificultad": 1,
+  "tiempoPreparacion": 15
+},
+{
+  "_id": {
+    "$oid": "6644959964d2dcda28da2666"
+  },
+  "nombre": "Ensalada de Espinaca y Fresas",
+  "ingredientes": [
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2647"
+      },
+      "cantidad": 100
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2654"
+      },
+      "cantidad": 150
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2657"
+      },
+      "cantidad": 50
+    }
+  ],
+  "instrucciones": [
+    "Lavar y cortar las fresas.",
+    "Mezclar las fresas y la espinaca en un bol.",
+    "Agregar el pimiento picado.",
+    "Aliñar al gusto."
+  ],
+  "valorNutricional": {
+    "calorias": 150,
+    "proteina": 5,
+    "grasa": 1,
+    "carbohidratos": 30,
+    "sal": 0.1,
+    "azucar": 20
+  },
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "foto": "https://example.com/ensalada_espinaca_fresas.jpg",
+  "dificultad": 1,
+  "tiempoPreparacion": 10
+},
+{
+  "_id": {
+    "$oid": "66449fd364d2dcda28da2670"
+  },
+  "nombre": "Arroz con Brócoli y Pollo",
+  "ingredientes": [
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2646"
+      },
+      "cantidad": 200
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da264c"
+      },
+      "cantidad": 100
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da264e"
+      },
+      "cantidad": 50
+    }
+  ],
+  "instrucciones": [
+    "Cocinar el arroz según las instrucciones del paquete.",
+    "Saltear el pollo en una sartén hasta que esté cocido.",
+    "Agregar el brócoli a la sartén y cocinar hasta que esté tierno.",
+    "Mezclar el arroz cocido con el pollo y el brócoli."
+  ],
+  "valorNutricional": {
+    "calorias": 400,
+    "proteina": 35,
+    "grasa": 8,
+    "carbohidratos": 50,
+    "sal": 0.5,
+    "azucar": 2
+  },
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "foto": "https://example.com/arroz_brocoli_pollo.jpg",
+  "dificultad": 3,
+  "tiempoPreparacion": 30
+},
+{
+  "_id": {
+    "$oid": "66449fd364d2dcda28da2671"
+  },
+  "nombre": "Tostadas de Aguacate y Huevo",
+  "ingredientes": [
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2649"
+      },
+      "cantidad": 100
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "cantidad": 100
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2656"
+      },
+      "cantidad": 5
+    }
+  ],
+  "instrucciones": [
+    "Tostar el pan.",
+    "Cocinar los huevos al gusto.",
+    "Triturar el aguacate y untarlo sobre el pan tostado.",
+    "Colocar el huevo cocido sobre el aguacate.",
+    "Agregar sal y ajo al gusto."
+  ],
+  "valorNutricional": {
+    "calorias": 350,
+    "proteina": 15,
+    "grasa": 25,
+    "carbohidratos": 20,
+    "sal": 0.5,
+    "azucar": 1
+  },
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "foto": "https://example.com/tostadas_aguacate_huevo.jpg",
+  "dificultad": 1,
+  "tiempoPreparacion": 15
+},
+{
+  "_id": {
+    "$oid": "66449fd364d2dcda28da2672"
+  },
+  "nombre": "Salmón al Horno con Espárragos",
+  "ingredientes": [
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da264f"
+      },
+      "cantidad": 200
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2647"
+      },
+      "cantidad": 100
+    }
+  ],
+  "instrucciones": [
+    "Precalentar el horno a 200 grados.",
+    "Colocar el salmón en una bandeja para hornear.",
+    "Colocar los espárragos junto al salmón.",
+    "Hornear durante 20 minutos o hasta que el salmón esté cocido."
+  ],
+  "valorNutricional": {
+    "calorias": 300,
+    "proteina": 35,
+    "grasa": 15,
+    "carbohidratos": 5,
+    "sal": 0.3,
+    "azucar": 2
+  },
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "foto": "https://example.com/salmon_horno_esparragos.jpg",
+  "dificultad": 2,
+  "tiempoPreparacion": 30
+},
+{
+  "_id": {
+    "$oid": "66449fd364d2dcda28da2673"
+  },
+  "nombre": "Ensalada de Quinoa y Vegetales",
+  "ingredientes": [
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da264a"
+      },
+      "cantidad": 50
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2658"
+      },
+      "cantidad": 50
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2659"
+      },
+      "cantidad": 30
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da265a"
+      },
+      "cantidad": 30
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da265b"
+      },
+      "cantidad": 30
+    }
+  ],
+  "instrucciones": [
+    "Cocinar la quinoa según las instrucciones del paquete.",
+    "Picar los vegetales.",
+    "Mezclar la quinoa cocida con los vegetales picados.",
+    "Aliñar al gusto."
+  ],
+  "valorNutricional": {
+    "calorias": 250,
+    "proteina": 8,
+    "grasa": 5,
+    "carbohidratos": 45,
+    "sal": 0.5,
+    "azucar": 5
+  },
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "foto": "https://example.com/ensalada_quinoa_vegetales.jpg",
+  "dificultad": 2,
+  "tiempoPreparacion": 20
+},
+{
+  "_id": {
+    "$oid": "66449fd364d2dcda28da2674"
+  },
+  "nombre": "Batido Verde",
+  "ingredientes": [
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "cantidad": 100
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2647"
+      },
+      "cantidad": 50
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2648"
+      },
+      "cantidad": 200
+    }
+  ],
+  "instrucciones": [
+    "Lavar todos los ingredientes.",
+    "Mezclar todos los ingredientes en una licuadora.",
+    "Licuar hasta obtener una mezcla homogénea."
+  ],
+  "valorNutricional": {
+    "calorias": 150,
+    "proteina": 5,
+    "grasa": 3,
+    "carbohidratos": 30,
+    "sal": 0.1,
+    "azucar": 10
+  },
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "foto": "https://example.com/batido_verde.jpg",
+  "dificultad": 1,
+  "tiempoPreparacion": 10
+},
+{
+  "_id": {
+    "$oid": "66449fd364d2dcda28da2675"
+  },
+  "nombre": "Pasta Primavera",
+  "ingredientes": [
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da264d"
+      },
+      "cantidad": 200
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da265c"
+      },
+      "cantidad": 50
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da265d"
+      },
+      "cantidad": 30
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da265e"
+      },
+      "cantidad": 30
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da265f"
+      },
+      "cantidad": 30
+    }
+  ],
+  "instrucciones": [
+    "Cocinar la pasta según las instrucciones del paquete.",
+    "Saltear los vegetales en una sartén con un poco de aceite.",
+    "Mezclar la pasta cocida con los vegetales salteados.",
+    "Aliñar al gusto."
+  ],
+  "valorNutricional": {
+    "calorias": 400,
+    "proteina": 10,
+    "grasa": 10,
+    "carbohidratos": 70,
+    "sal": 0.3,
+    "azucar": 10
+  },
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "foto": "https://example.com/pasta_primavera.jpg",
+  "dificultad": 2,
+  "tiempoPreparacion": 20
+},
+{
+  "_id": {
+    "$oid": "66449fd364d2dcda28da2676"
+  },
+  "nombre": "Ensalada Griega",
+  "ingredientes": [
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da264a"
+      },
+      "cantidad": 50
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2652"
+      },
+      "cantidad": 50
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2659"
+      },
+      "cantidad": 30
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2657"
+      },
+      "cantidad": 30
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2651"
+      },
+      "cantidad": 30
+    }
+  ],
+  "instrucciones": [
+    "Picar todos los ingredientes en trozos pequeños.",
+    "Mezclar todos los ingredientes en un bol.",
+    "Agregar el queso feta y mezclar suavemente.",
+    "Aliñar al gusto."
+  ],
+  "valorNutricional": {
+    "calorias": 200,
+    "proteina": 6,
+    "grasa": 10,
+    "carbohidratos": 20,
+    "sal": 0.5,
+    "azucar": 5
+  },
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "foto": "https://example.com/ensalada_griega.jpg",
+  "dificultad": 1,
+  "tiempoPreparacion": 15
+},
+{
+  "_id": {
+    "$oid": "66449fd364d2dcda28da2677"
+  },
+  "nombre": "Tortilla de Espinacas",
+  "ingredientes": [
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2649"
+      },
+      "cantidad": 200
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2647"
+      },
+      "cantidad": 100
+    },
+    {
+      "id": {
+        "$oid": "6644916764d2dcda28da2659"
+      },
+      "cantidad": 50
+    }
+  ],
+  "instrucciones": [
+    "Batir los huevos en un bol.",
+    "Saltear la espinaca y la cebolla en una sartén.",
+    "Agregar los huevos batidos a la sartén y cocinar a fuego medio.",
+    "Doblar la tortilla por la mitad cuando esté cocida por un lado y cocinar hasta que esté completamente hecha."
+  ],
+  "valorNutricional": {
+    "calorias": 250,
+    "proteina": 15,
+    "grasa": 18,
+    "carbohidratos": 5,
+    "sal": 0.4,
+    "azucar": 2
+  },
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "foto": "https://example.com/tortilla_espinacas.jpg",
+  "dificultad": 2,
+  "tiempoPreparacion": 15
+}]

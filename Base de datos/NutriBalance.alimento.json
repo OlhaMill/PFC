@@ -1,0 +1,268 @@
+[{
+  "_id": {
+    "$oid": "66448e2a64d2dcda28da2623"
+  },
+  "nombre": "Manzana",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da2645"
+  },
+  "nombre": "Plátano",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da2646"
+  },
+  "nombre": "Pollo",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da2647"
+  },
+  "nombre": "Espinaca",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da2648"
+  },
+  "nombre": "Leche",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da2649"
+  },
+  "nombre": "Huevo",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da264a"
+  },
+  "nombre": "Tomate",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da264b"
+  },
+  "nombre": "Zanahoria",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da264c"
+  },
+  "nombre": "Arroz",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da264d"
+  },
+  "nombre": "Pasta",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da264e"
+  },
+  "nombre": "Brócoli",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da264f"
+  },
+  "nombre": "Salmón",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da2650"
+  },
+  "nombre": "Avena",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da2651"
+  },
+  "nombre": "Queso",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da2652"
+  },
+  "nombre": "Aguacate",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da2653"
+  },
+  "nombre": "Yogur",
+  "creado": "66448d0464d2dcda28da2619"
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da2654"
+  },
+  "nombre": "Fresa",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da2655"
+  },
+  "nombre": "Nuez",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da2656"
+  },
+  "nombre": "Ajo",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da2657"
+  },
+  "nombre": "Pimiento",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da2658"
+  },
+  "nombre": "Pepino",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da2659"
+  },
+  "nombre": "Cebolla",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da265a"
+  },
+  "nombre": "Pimiento Rojo",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da265b"
+  },
+  "nombre": "Pimiento Verde",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da265c"
+  },
+  "nombre": "Calabacín",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da265d"
+  },
+  "nombre": "Cilantro",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da265e"
+  },
+  "nombre": "Lima",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da265f"
+  },
+  "nombre": "Limón",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da2660"
+  },
+  "nombre": "Perejil",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+},
+{
+  "_id": {
+    "$oid": "6644916764d2dcda28da2661"
+  },
+  "nombre": "Champiñón",
+  "creado": {
+    "$oid": "66448d0464d2dcda28da2619"
+  }
+}]

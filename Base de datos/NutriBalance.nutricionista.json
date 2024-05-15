@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "66448d0464d2dcda28da2619"
+  },
+  "nombre": "John Doe",
+  "email": "johndoe@example.com",
+  "telefono": 123456789,
+  "preferenciasDashboard": {
+    "idioma": "es",
+    "zonaHoraria": "GMT-5",
+    "temaInterfaz": "oscuro",
+    "undMedida": "métrico",
+    "componenteDahboard": [
+      "calendario",
+      "progreso"
+    ]
+  }
+}]
