@@ -1,0 +1,121 @@
+CREATE TABLE nutricionista (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100),
+    email VARCHAR(100),
+    telefono VARCHAR(15)
+);
+
+CREATE TABLE valor_nutricional (
+    id SERIAL PRIMARY KEY,
+    calorias DOUBLE PRECISION,
+    proteina DOUBLE PRECISION,
+    grasa DOUBLE PRECISION,
+    carbohidratos DOUBLE PRECISION,
+    sal DOUBLE PRECISION,
+    azucar DOUBLE PRECISION
+);
+
+CREATE TABLE genero (
+	id SERIAL PRIMARY KEY,
+    genero VARCHAR(100)
+);
+
+CREATE TABLE cliente (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100),
+    email VARCHAR(100),
+    telefono VARCHAR(15),
+    fechaNacimiento DATE,
+    genero_id INTEGER REFERENCES genero(id),
+    nutricionista_id INTEGER REFERENCES nutricionista(id),
+    valor_nutricional_rec INTEGER REFERENCES valor_nutricional(id),
+    fotos JSONB
+);
+
+
+CREATE TABLE consulta (
+    id SERIAL PRIMARY KEY,
+    fechaHora TIMESTAMP,
+    observaciones TEXT,
+	peso DOUBLE PRECISION,
+    objetivo TEXT,
+	objeivo_peso DOUBLE PRECISION,
+    cliente_id INTEGER REFERENCES cliente(id),
+    nutricionista_id INTEGER REFERENCES nutricionista(id)
+);
+
+
+CREATE TABLE medidas (
+	id SERIAL PRIMARY KEY,
+	consulta_id INTEGER REFERENCES consulta(id),
+	peso DOUBLE PRECISION,
+	imc DOUBLE PRECISION,
+	cir_cintura DOUBLE PRECISION,
+	cir_cadera DOUBLE PRECISION,
+	cir_adicional TEXT
+);
+	
+CREATE TABLE receta (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100),
+    instrucciones TEXT[],
+    valor_nutricional_id INTEGER REFERENCES valor_nutricional(id),
+    foto TEXT,
+    dificultad DOUBLE PRECISION,
+    tiempo_preparacion INTEGER,
+	creado_por INTEGER REFERENCES nutricionista(id)
+);
+CREATE TABLE dia
+(
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL UNIQUE
+);
+
+CREATE TABLE recetas_por_dia
+(
+	id SERIAL PRIMARY KEY,
+	dia_id INTEGER NOT NULL REFERENCES dia(id),
+    desayuno_id INTEGER REFERENCES receta(id),
+    almuerzo_id INTEGER REFERENCES receta(id),
+    comida_id INTEGER REFERENCES receta(id),
+    merienda_id INTEGER REFERENCES receta(id),
+    cena_id INTEGER REFERENCES receta(id)
+);
+
+CREATE TABLE dieta (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100),
+    descripcion TEXT,
+    lunes_id INTEGER REFERENCES recetas_por_dia(id),
+	martes_id INTEGER REFERENCES recetas_por_dia(id),
+	miercoles_id INTEGER REFERENCES recetas_por_dia(id),
+	jueves_id INTEGER REFERENCES recetas_por_dia(id),
+	viernes_id INTEGER REFERENCES recetas_por_dia(id),
+	sabado_id INTEGER REFERENCES recetas_por_dia(id),
+	domingo_id INTEGER REFERENCES recetas_por_dia(id),
+    creado_por INTEGER REFERENCES nutricionista(id)
+);
+
+
+CREATE TABLE cliente_dieta (
+	id SERIAL PRIMARY KEY,
+	cliente_id INTEGER REFERENCES cliente(id),
+	dieta_id INTEGER REFERENCES dieta(id)
+);
+
+
+CREATE TABLE alimento (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100),
+    creado_por INTEGER REFERENCES nutricionista(id)
+);
+
+CREATE TABLE ingredientes (
+	id SERIAL PRIMARY KEY,
+	receta_id INTEGER REFERENCES receta(id),
+	alimento_id INTEGER REFERENCES alimento(id),
+	cantidad DOUBLE PRECISION
+);
+
+
+

@@ -1,0 +1,243 @@
+CREATE DATABASE nutribalance
+    WITH
+    OWNER = olha_mill
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'es_ES.UTF-8'
+    LC_CTYPE = 'es_ES.UTF-8'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1
+    IS_TEMPLATE = False;
+
+CREATE TABLE IF NOT EXISTS public.alimento
+(
+    id integer NOT NULL,
+    nombre character varying(100),
+    creado_por integer,
+    CONSTRAINT alimento_pkey PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS public.cliente
+(
+    id integer NOT NULL,
+    nombre character varying(100),
+    email character varying(100),
+    telefono character varying(15),
+    fecha_nacimiento date,
+    nutricionista_id integer,
+    valor_nutricional_rec integer,
+    fotos jsonb,
+    genero character varying(20) NOT NULL,
+    valoración double precision,
+    CONSTRAINT cliente_pkey PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS public.cliente_dieta
+(
+    id integer NOT NULL,
+    cliente_id integer,
+    dieta_id integer,
+    CONSTRAINT cliente_dieta_pkey PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS public.consulta
+(
+    id integer NOT NULL,
+    fecha_hora timestamp without time zone,
+    observaciones text,
+    peso double precision,
+    objetivo text,
+    objeivo_peso double precision,
+    cliente_id integer,
+    nutricionista_id integer,
+    CONSTRAINT consulta_pkey PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS public.dieta
+(
+    id integer NOT NULL ,
+    nombre character varying(100),
+    descripcion text,
+    creado_por integer,
+    CONSTRAINT dieta_pkey PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS public.ingredientes
+(
+    id integer NOT NULL,
+    receta_id integer,
+    alimento_id integer,
+    cantidad double precision,
+    CONSTRAINT ingredientes_pkey PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS public.medidas
+(
+    id integer NOT NULL,
+    consulta_id integer,
+    peso double precision,
+    imc double precision,
+    cir_cintura double precision,
+    cir_cadera double precision,
+    cir_adicional text,
+    CONSTRAINT medidas_pkey PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS public.nutricionista
+(
+    id integer NOT NULL,
+    nombre character varying(100),
+    email character varying(100),
+    telefono character varying(15),
+    CONSTRAINT nutricionista_pkey PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS public.receta
+(
+    id integer NOT NULL ,
+    nombre character varying(100),
+    instrucciones text[],
+    valor_nutricional_id integer,
+    foto text,
+    dificultad double precision,
+    tiempo_preparacion integer,
+    creado_por integer,
+    CONSTRAINT receta_pkey PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS public.dieta_receta
+(
+    id integer NOT NULL,
+    receta_id integer,
+    dieta_id integer,
+    dia character varying(15),
+    tipo_comida character varying(20),
+    CONSTRAINT dieta_receta_pkey PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS public.valor_nutricional
+(
+    id integer NOT NULL,
+    calorias double precision,
+    proteina double precision,
+    grasa double precision,
+    carbohidratos double precision,
+    sal double precision,
+    azucar double precision,
+    CONSTRAINT valor_nutricional_pkey PRIMARY KEY (id)
+);
+
+
+-- Añadir clave foránea en la tabla alimento
+ALTER TABLE public.alimento
+ADD CONSTRAINT alimento_creado_por_fkey
+FOREIGN KEY (creado_por)
+REFERENCES public.nutricionista (id)
+ON UPDATE NO ACTION
+ON DELETE NO ACTION;
+
+-- Añadir claves foráneas en la tabla cliente
+ALTER TABLE public.cliente
+ADD CONSTRAINT cliente_nutricionista_id_fkey
+FOREIGN KEY (nutricionista_id)
+REFERENCES public.nutricionista (id)
+ON UPDATE NO ACTION
+ON DELETE NO ACTION;
+
+ALTER TABLE public.cliente
+ADD CONSTRAINT cliente_valor_nutricional_rec_fkey
+FOREIGN KEY (valor_nutricional_rec)
+REFERENCES public.valor_nutricional (id)
+ON UPDATE NO ACTION
+ON DELETE NO ACTION;
+
+-- Añadir claves foráneas en la tabla cliente_dieta
+ALTER TABLE public.cliente_dieta
+ADD CONSTRAINT cliente_dieta_cliente_id_fkey
+FOREIGN KEY (cliente_id)
+REFERENCES public.cliente (id)
+ON UPDATE NO ACTION
+ON DELETE NO ACTION;
+
+ALTER TABLE public.cliente_dieta
+ADD CONSTRAINT cliente_dieta_dieta_id_fkey
+FOREIGN KEY (dieta_id)
+REFERENCES public.dieta (id)
+ON UPDATE NO ACTION
+ON DELETE NO ACTION;
+
+-- Añadir claves foráneas en la tabla consulta
+ALTER TABLE public.consulta
+ADD CONSTRAINT consulta_cliente_id_fkey
+FOREIGN KEY (cliente_id)
+REFERENCES public.cliente (id)
+ON UPDATE NO ACTION
+ON DELETE NO ACTION;
+
+ALTER TABLE public.consulta
+ADD CONSTRAINT consulta_nutricionista_id_fkey
+FOREIGN KEY (nutricionista_id)
+REFERENCES public.nutricionista (id)
+ON UPDATE NO ACTION
+ON DELETE NO ACTION;
+
+-- Añadir claves foráneas en la tabla dieta
+ALTER TABLE public.dieta
+ADD CONSTRAINT dieta_creado_por_fkey
+FOREIGN KEY (creado_por)
+REFERENCES public.nutricionista (id)
+ON UPDATE NO ACTION
+ON DELETE NO ACTION;
+
+-- Añadir claves foráneas en la tabla ingredientes
+ALTER TABLE public.ingredientes
+ADD CONSTRAINT ingredientes_alimento_id_fkey
+FOREIGN KEY (alimento_id)
+REFERENCES public.alimento (id)
+ON UPDATE NO ACTION
+ON DELETE NO ACTION;
+
+ALTER TABLE public.ingredientes
+ADD CONSTRAINT ingredientes_receta_id_fkey
+FOREIGN KEY (receta_id)
+REFERENCES public.receta (id)
+ON UPDATE NO ACTION
+ON DELETE NO ACTION;
+
+-- Añadir claves foráneas en la tabla medidas
+ALTER TABLE public.medidas
+ADD CONSTRAINT medidas_consulta_id_fkey
+FOREIGN KEY (consulta_id)
+REFERENCES public.consulta (id)
+ON UPDATE NO ACTION
+ON DELETE NO ACTION;
+
+-- Añadir claves foráneas en la tabla receta
+ALTER TABLE public.receta
+ADD CONSTRAINT receta_creado_por_fkey
+FOREIGN KEY (creado_por)
+REFERENCES public.nutricionista (id)
+ON UPDATE NO ACTION
+ON DELETE NO ACTION;
+
+ALTER TABLE public.receta
+ADD CONSTRAINT receta_valor_nutricional_id_fkey
+FOREIGN KEY (valor_nutricional_id)
+REFERENCES public.valor_nutricional (id)
+ON UPDATE NO ACTION
+ON DELETE NO ACTION;
+
+-- Añadir claves foráneas en la tabla dieta_receta
+ALTER TABLE public.dieta_receta
+ADD CONSTRAINT dieta_receta_dieta_fkey
+FOREIGN KEY (dieta_id)
+REFERENCES public.dieta (id)
+ON UPDATE NO ACTION
+ON DELETE NO ACTION;
+
+ALTER TABLE public.dieta_receta
+ADD CONSTRAINT dieta_receta_receta_id_fkey
+FOREIGN KEY (receta_id)
+REFERENCES public.receta (id)
+ON UPDATE NO ACTION
+ON DELETE NO ACTION;
+

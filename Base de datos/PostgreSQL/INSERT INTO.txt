@@ -1,0 +1,110 @@
+-- Insertar datos en la tabla genero
+INSERT INTO genero (genero) VALUES ('Masculino'), ('Femenino'), ('No especificado');
+
+-- Insertar datos en la tabla Nutricionista
+INSERT INTO Nutricionista (nombre, email, telefono) VALUES 
+('Dr. Carlos García', 'carlos.garcia@example.com', '123456789'),
+('Dra. Ana Martínez', 'ana.martinez@example.com', '987654321');
+
+-- Insertar datos en la tabla cliente
+INSERT INTO cliente (nombre, email, telefono, fechaNacimiento, genero_id, nutricionista_id) VALUES 
+('Juan Pérez', 'juan.perez@example.com', '111222333', '1980-05-15', 1, 1),
+('María López', 'maria.lopez@example.com', '444555666', '1990-07-25', 2, 2),
+('John Doe', 'john.doe@example.com', '777888999', '1985-10-30', 1, 1),
+('Jane Smith', 'jane.smith@example.com', '000111222', '1995-12-05', 2, 2);
+
+-- Insertar datos en la tabla valor_nutricional
+INSERT INTO valor_nutricional (calorias, proteina, grasa, carbohidratos, sal, azucar) VALUES 
+(200, 10, 5, 30, 1, 10),
+(150, 5, 3, 20, 0.5, 5);
+
+-- Insertar datos en la tabla alimento
+INSERT INTO alimento (nombre, creado_por) VALUES 
+('Pollo', 1),
+('Tomate', 2),
+('Aguacate', 1),
+('Lechuga', 2),
+('Pasta', 1),
+('Carne de Res', 2),
+('Patata', 1),
+('Huevo', 2),
+('Arroz', 1),
+('Zanahoria', 2),
+('Cebolla', 1),
+('Pimiento', 2),
+('Ajo', 1);
+
+-- Insertar más recetas
+INSERT INTO receta (nombre, instrucciones, valor_nutricional_id, foto, dificultad, tiempo_preparacion, creado_por) VALUES 
+('Ensalada de Pollo', ARRAY['Cortar el pollo', 'Mezclar con lechuga y tomate'], 1, 'ensalada_pollo.jpg', 2.5, 15, 1),
+('Sopa de Tomate', ARRAY['Cocer los tomates', 'Batir hasta obtener una mezcla homogénea'], 2, 'sopa_tomate.jpg', 1.5, 30, 2),
+('Paella', ARRAY['Calentar aceite en una sartén', 'Añadir ajo, cebolla, pimiento y tomate', 'Añadir arroz y caldo', 'Cocinar hasta que el arroz esté listo'], 1, 'paella.jpg', 3.5, 45, 1),
+('Tortilla Española', ARRAY['Cortar las patatas y cebolla', 'Freír en aceite hasta que estén blandas', 'Batir los huevos y mezclar con las patatas y cebolla', 'Cocinar en una sartén hasta que cuaje'], 2, 'tortilla_espanola.jpg', 2.0, 20, 2),
+('Pasta Carbonara', ARRAY['Cocer la pasta', 'Freír panceta', 'Mezclar huevo y queso', 'Combinar todos los ingredientes'], 1, 'pasta_carbonara.jpg', 2.5, 25, 1),
+('Ensalada César', ARRAY['Cortar lechuga', 'Preparar aderezo', 'Mezclar con crutones y pollo'], 2, 'ensalada_cesar.jpg', 1.5, 15, 2),
+('Gazpacho', ARRAY['Mezclar tomates, pepino, pimiento, cebolla y ajo', 'Añadir aceite, vinagre y sal', 'Batir hasta obtener una sopa fría'], 1, 'gazpacho.jpg', 1.0, 15, 1);
+
+-- Insertar ingredientes para las nuevas recetas
+-- Ensalada de Pollo
+INSERT INTO ingredientes (receta_id, alimento_id, cantidad) VALUES 
+((SELECT id FROM receta WHERE nombre = 'Ensalada de Pollo'), (SELECT id FROM alimento WHERE nombre = 'Pollo'), 200),
+((SELECT id FROM receta WHERE nombre = 'Ensalada de Pollo'), (SELECT id FROM alimento WHERE nombre = 'Tomate'), 100),
+((SELECT id FROM receta WHERE nombre = 'Ensalada de Pollo'), (SELECT id FROM alimento WHERE nombre = 'Lechuga'), 50);
+
+-- Sopa de Tomate
+INSERT INTO ingredientes (receta_id, alimento_id, cantidad) VALUES 
+((SELECT id FROM receta WHERE nombre = 'Sopa de Tomate'), (SELECT id FROM alimento WHERE nombre = 'Tomate'), 500);
+
+-- Paella
+INSERT INTO ingredientes (receta_id, alimento_id, cantidad) VALUES 
+((SELECT id FROM receta WHERE nombre = 'Paella'), (SELECT id FROM alimento WHERE nombre = 'Arroz'), 200),
+((SELECT id FROM receta WHERE nombre = 'Paella'), (SELECT id FROM alimento WHERE nombre = 'Pimiento'), 100),
+((SELECT id FROM receta WHERE nombre = 'Paella'), (SELECT id FROM alimento WHERE nombre = 'Cebolla'), 100),
+((SELECT id FROM receta WHERE nombre = 'Paella'), (SELECT id FROM alimento WHERE nombre = 'Ajo'), 50);
+
+-- Tortilla Española
+INSERT INTO ingredientes (receta_id, alimento_id, cantidad) VALUES 
+((SELECT id FROM receta WHERE nombre = 'Tortilla Española'), (SELECT id FROM alimento WHERE nombre = 'Patata'), 300),
+((SELECT id FROM receta WHERE nombre = 'Tortilla Española'), (SELECT id FROM alimento WHERE nombre = 'Cebolla'), 100),
+((SELECT id FROM receta WHERE nombre = 'Tortilla Española'), (SELECT id FROM alimento WHERE nombre = 'Huevo'), 200);
+
+-- Pasta Carbonara
+INSERT INTO ingredientes (receta_id, alimento_id, cantidad) VALUES 
+((SELECT id FROM receta WHERE nombre = 'Pasta Carbonara'), (SELECT id FROM alimento WHERE nombre = 'Pasta'), 200),
+((SELECT id FROM receta WHERE nombre = 'Pasta Carbonara'), (SELECT id FROM alimento WHERE nombre = 'Ajo'), 50);
+
+-- Ensalada César
+INSERT INTO ingredientes (receta_id, alimento_id, cantidad) VALUES 
+((SELECT id FROM receta WHERE nombre = 'Ensalada César'), (SELECT id FROM alimento WHERE nombre = 'Pollo'), 200),
+((SELECT id FROM receta WHERE nombre = 'Ensalada César'), (SELECT id FROM alimento WHERE nombre = 'Lechuga'), 100);
+
+-- Gazpacho
+INSERT INTO ingredientes (receta_id, alimento_id, cantidad) VALUES 
+((SELECT id FROM receta WHERE nombre = 'Gazpacho'), (SELECT id FROM alimento WHERE nombre = 'Tomate'), 500),
+((SELECT id FROM receta WHERE nombre = 'Gazpacho'), (SELECT id FROM alimento WHERE nombre = 'Pimiento'), 100),
+((SELECT id FROM receta WHERE nombre = 'Gazpacho'), (SELECT id FROM alimento WHERE nombre = 'Cebolla'), 100),
+((SELECT id FROM receta WHERE nombre = 'Gazpacho'), (SELECT id FROM alimento WHERE nombre = 'Ajo'), 50);
+
+-- Insertar datos en la tabla dia
+INSERT INTO dia (nombre) VALUES ('Lunes'), ('Martes'), ('Miércoles'), ('Jueves'), ('Viernes'), ('Sábado'), ('Domingo');
+
+-- Insertar datos en la tabla recetas_por_dia
+INSERT INTO recetas_por_dia (dia_id, desayuno_id, almuerzo_id, comida_id, merienda_id, cena_id) VALUES 
+(1, (SELECT id FROM receta WHERE nombre = 'Gazpacho'), 2, 1, 2, 1), -- Lunes
+(2, 2, (SELECT id FROM receta WHERE nombre = 'Tortilla Española'), 2, 1, 2), -- Martes
+(3, 1, 2, (SELECT id FROM receta WHERE nombre = 'Paella'), 2, 1), -- Miércoles
+(4, 2, 1, 2, (SELECT id FROM receta WHERE nombre = 'Ensalada César'), 2), -- Jueves
+(5, 1, 2, 1, 2, (SELECT id FROM receta WHERE nombre = 'Pasta Carbonara')), -- Viernes
+(6, 2, 1, 2, 1, 2), -- Sábado
+(7, 1, 2, 1, 2, 1); -- Domingo
+
+-- Insertar datos en la tabla dieta
+INSERT INTO dieta (nombre, descripcion, lunes_id, martes_id, miercoles_id, jueves_id, viernes_id, sabado_id, domingo_id, creado_por) VALUES 
+('Dieta Mediterránea', 'Una dieta basada en alimentos tradicionales de la región mediterránea', 1, 2, 3, 4, 5, 6, 7, 1);
+
+-- Insertar datos en la tabla cliente_dieta
+INSERT INTO cliente_dieta (cliente_id, dieta_id) VALUES 
+(1, 1), -- Juan Pérez sigue la Dieta Mediterránea
+(2, 1), -- María López sigue la Dieta Mediterránea
+(3, 1), -- John Doe sigue la Dieta Mediterránea
+(4, 1); -- Jane Smith sigue la Dieta Mediterránea

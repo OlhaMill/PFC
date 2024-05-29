@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" styleClass="anchor_pane" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.om.nutribalance.controllers.PrincipalController">
+   <children>
+      <HBox layoutX="-1.0" prefHeight="62.0" prefWidth="1200.0" styleClass="hbox_cabecera">
+         <children>
+            <StackPane prefHeight="150.0" prefWidth="62.0" styleClass="fondo_verde_oscuro">
+               <children>
+                  <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" styleClass="aumentar">
+                     <image>
+                        <Image url="@../iconos/Admin_Dashboard_Menu_Icon_1.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></StackPane>
+            <StackPane prefHeight="62.0" prefWidth="846.0">
+               <children>
+                  <Label styleClass="letra_cabecera" text="NUTRIBALANCE" StackPane.alignment="CENTER_LEFT">
+                     <padding>
+                        <Insets left="46.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </StackPane>
+            <StackPane prefHeight="62.0" prefWidth="292.0">
+               <children>
+                  <StackPane prefHeight="60.0" prefWidth="166.0">
+                     <children>
+                        <ImageView fitHeight="33.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER_LEFT">
+                           <image>
+                              <Image url="@../iconos/Admin_Dashboard_selection.png" />
+                           </image>
+                           <StackPane.margin>
+                              <Insets left="25.0" />
+                           </StackPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER_RIGHT">
+                           <image>
+                              <Image url="@../iconos/Admin_Dashboard_Image_placeholder_1_Copy_4.png" />
+                           </image>
+                           <StackPane.margin>
+                              <Insets right="25.0" />
+                           </StackPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label styleClass="nombre_cabecera" text="Olha Millionna" />
+                     </children>
+                  </StackPane>
+               </children></StackPane>
+         </children>
+      </HBox>
+      <GridPane layoutY="62.0" prefHeight="638.0" prefWidth="62.0" styleClass="fondo_verde">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="1.0" prefHeight="58.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="0.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="48.0" styleClass="fondo_verde" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <children>
+                  <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="48.0" styleClass="menu_item" />
+                  <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" styleClass="aumentar" StackPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../iconos/Admin_Dashboard_Home_Icon_1.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="48.0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <children>
+                  <ImageView fitHeight="28.0" fitWidth="28.0" onMouseClicked="#clickPestanaCliente" pickOnBounds="true" preserveRatio="true" styleClass="aumentar" StackPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../iconos/Admin_Dashboard_People_Alt_Icon_1.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="48.0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <children>
+                  <ImageView fitHeight="28.0" fitWidth="28.0" onMouseClicked="#clickPestanaAgenda" pickOnBounds="true" preserveRatio="true" styleClass="aumentar" StackPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../iconos/Admin_Dashboard_Event_Icon_1.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="48.0" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+               <children>
+                  <ImageView fitHeight="28.0" fitWidth="28.0" onMouseClicked="#clickPestanaAlimentacion" pickOnBounds="true" preserveRatio="true" styleClass="aumentar" StackPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../iconos/Admin_Dashboard_Restaurant_Menu_Icon_1.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="48.0" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+               <children>
+                  <ImageView fitHeight="28.0" fitWidth="28.0" onMouseClicked="#clickPestanaEstadisticas" pickOnBounds="true" preserveRatio="true" styleClass="aumentar" StackPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../iconos/Admin_Dashboard_Pie_Chart_Icon_1.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="48.0" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+               <children>
+                  <ImageView fitHeight="28.0" fitWidth="28.0" onMouseClicked="#clickPestanaAjustes" pickOnBounds="true" preserveRatio="true" styleClass="aumentar" StackPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../iconos/Admin_Dashboard_Settings_Icon_1.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </StackPane>
+         </children>
+      </GridPane>
+      <GridPane layoutX="62.0" layoutY="71.0" prefHeight="598.0" prefWidth="1138.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="299.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" minHeight="0.0" prefHeight="299.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <StackPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="252.0" prefWidth="345.0" styleClass="stack_semiredondo" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets left="29.0" top="20.0" />
+               </GridPane.margin>
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" styleClass="aumentar" StackPane.alignment="TOP_RIGHT">
+                     <StackPane.margin>
+                        <Insets right="10.0" top="10.0" />
+                     </StackPane.margin>
+                     <image>
+                        <Image url="@../iconos/Admin_Dashboard_selection%20(1).png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <TableView fx:id="listaNuevosClientes" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="196.0" prefWidth="291.0" styleClass="tabla_letra" StackPane.alignment="BOTTOM_CENTER">
+                     <StackPane.margin>
+                        <Insets bottom="12.0" />
+                     </StackPane.margin>
+                     <columns>
+                        <TableColumn fx:id="colNombre" prefWidth="106.0" text="Nombre" />
+                        <TableColumn fx:id="colEmail" editable="false" prefWidth="179.0" sortable="false" text="Correo" />
+                     </columns>
+                  </TableView>
+                  <Label styleClass="letra_widget_nombre" text="Nuevos clientes" StackPane.alignment="TOP_CENTER">
+                     <StackPane.margin>
+                        <Insets />
+                     </StackPane.margin>
+                  </Label>
+               </children>
+            </StackPane>
+            <StackPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="252.0" prefWidth="345.0" styleClass="stack_semiredondo" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" styleClass="aumentar" StackPane.alignment="TOP_RIGHT">
+                     <image>
+                        <Image url="@../iconos/Admin_Dashboard_selection%20(1).png" />
+                     </image>
+                     <StackPane.margin>
+                        <Insets right="10.0" top="10.0" />
+                     </StackPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label styleClass="letra_widget_nombre" text="Últimas reseñas" StackPane.alignment="TOP_CENTER" />
+                  <VBox fx:id="vBoxRes" prefHeight="224.0" prefWidth="343.0">
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                     <StackPane.margin>
+                        <Insets top="40.0" />
+                     </StackPane.margin>
+                  </VBox>
+               </children></StackPane>
+            <StackPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="252.0" prefWidth="345.0" styleClass="stack_semiredondo" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets right="22.0" top="20.0" />
+               </GridPane.margin>
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" styleClass="aumentar" StackPane.alignment="TOP_RIGHT">
+                     <image>
+                        <Image url="@../iconos/Admin_Dashboard_selection%20(1).png" />
+                     </image>
+                     <StackPane.margin>
+                        <Insets right="10.0" top="10.0" />
+                     </StackPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label styleClass="letra_widget_nombre" text="Alimentación" StackPane.alignment="TOP_CENTER" />
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickModificarDieta" styleClass="boton_principal" text="Modificar dieta" StackPane.alignment="TOP_CENTER">
+                     <padding>
+                        <Insets bottom="5.0" left="92.0" right="92.0" top="5.0" />
+                     </padding>
+                     <StackPane.margin>
+                        <Insets top="69.0" />
+                     </StackPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" styleClass="boton_principal" text="Añadir receta" StackPane.alignment="TOP_CENTER">
+                     <padding>
+                        <Insets bottom="5.0" left="98.0" right="98.0" top="5.0" />
+                     </padding>
+                     <StackPane.margin>
+                        <Insets top="123.0" />
+                     </StackPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" styleClass="boton_principal" text="Añadir alimento" StackPane.alignment="TOP_CENTER">
+                     <padding>
+                        <Insets bottom="5.0" left="89.5" right="89.0" top="5.0" />
+                     </padding>
+                     <StackPane.margin>
+                        <Insets top="177.0" />
+                     </StackPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </StackPane>
+            <StackPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="252.0" prefWidth="586.0" styleClass="stack_semiredondo" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets left="29.0" top="10.0" />
+               </GridPane.margin>
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" styleClass="aumentar" StackPane.alignment="TOP_RIGHT">
+                     <image>
+                        <Image url="@../iconos/Admin_Dashboard_selection%20(1).png" />
+                     </image>
+                     <StackPane.margin>
+                        <Insets right="10.0" top="10.0" />
+                     </StackPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label styleClass="letra_widget_nombre" text="Próxima consulta" StackPane.alignment="TOP_LEFT">
+                     <padding>
+                        <Insets left="120.0" />
+                     </padding>
+                  </Label>
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" styleClass="boton_principal" text="Agregar consulta" StackPane.alignment="BOTTOM_CENTER">
+                     <padding>
+                        <Insets bottom="5.0" left="89.5" right="89.0" top="5.0" />
+                     </padding>
+                     <StackPane.margin>
+                        <Insets bottom="20.0" />
+                     </StackPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label styleClass="letra_principal_consulta" text="No hay consultas programadas para hoy" StackPane.alignment="BOTTOM_CENTER">
+                     <StackPane.margin>
+                        <Insets bottom="70.0" />
+                     </StackPane.margin>
+                  </Label>
+                  <ImageView fitHeight="90.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../iconos/Admin_Dashboard_selection%20(2).png" />
+                     </image>
+                     <StackPane.margin>
+                        <Insets bottom="60.0" />
+                     </StackPane.margin>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <StackPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="252.0" prefWidth="463.0" styleClass="stack_semiredondo" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets right="29.0" top="10.0" />
+               </GridPane.margin>
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" styleClass="aumentar" StackPane.alignment="TOP_RIGHT">
+                     <image>
+                        <Image url="@../iconos/Admin_Dashboard_selection%20(1).png" />
+                     </image>
+                     <StackPane.margin>
+                        <Insets right="10.0" top="10.0" />
+                     </StackPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label styleClass="letra_widget_nombre" text="Últimas consultas" StackPane.alignment="TOP_LEFT">
+                     <padding>
+                        <Insets left="120.0" />
+                     </padding>
+                  </Label>
+                  <TableView fx:id="tablaUltimasConsultas" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="216.0" prefWidth="434.0" styleClass="tabla_letra" StackPane.alignment="BOTTOM_CENTER">
+                     <columns>
+                        <TableColumn fx:id="colFecha" prefWidth="90.0" text="Fecha" />
+                        <TableColumn fx:id="colHora" prefWidth="90.0" text="Hora" />
+                        <TableColumn fx:id="colCliente" prefWidth="246.0" text="Cliente" />
+                     </columns></TableView>
+               </children>
+            </StackPane>
+            <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="img_verde" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="img_verde" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets left="50.0" />
+                     </GridPane.margin>
+                     <image>
+                        <Image url="@../iconos/Admin_Dashboard_Account_Group_Icon_1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <GridPane.margin>
+                  <Insets left="50.0" top="10.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="15.5" left="10.0" right="10.0" top="15.5" />
+               </padding>
+            </StackPane>
+            <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="img_verde" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+               <children>
+                  <ImageView fitHeight="28.75" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" styleClass="img_verde" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <image>
+                        <Image url="@../iconos/Admin_Dashboard_People_Star_Icon_1.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets left="50.0" />
+                     </GridPane.margin>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="11.0" left="11.0" right="11.0" top="11.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets left="415.0" top="10.0" />
+               </GridPane.margin>
+            </StackPane>
+            <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="img_verde" GridPane.valignment="TOP">
+               <children>
+                  <ImageView fitHeight="28.75" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" styleClass="img_verde" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <image>
+                        <Image url="@../iconos/Admin_Dashboard_Food_Icon_1.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets left="50.0" />
+                     </GridPane.margin>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="12.0" left="11.0" right="11.0" top="11.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets left="788.0" top="10.0" />
+               </GridPane.margin>
+            </StackPane>
+            <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="img_verde" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <children>
+                  <ImageView fitHeight="28.75" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" styleClass="img_verde" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <image>
+                        <Image url="@../iconos/Admin_Dashboard_Notebook_Plus_Icon_1.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets left="50.0" />
+                     </GridPane.margin>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="11.0" left="12.0" right="12.0" top="11.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets left="50.0" top="12.0" />
+               </GridPane.margin>
+            </StackPane>
+            <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="img_verde" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <children>
+                  <ImageView fitHeight="28.75" fitWidth="29.0" pickOnBounds="true" preserveRatio="true" styleClass="img_verde" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <image>
+                        <Image url="@../iconos/Admin_Dashboard_Notebook_Multiple_Icon_1.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets left="50.0" />
+                     </GridPane.margin>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="11.0" left="10.0" right="11.0" top="10.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets left="666.0" top="12.0" />
+               </GridPane.margin>
+            </StackPane>
+         </children>
+      </GridPane>
+      <Group fx:id="groupElegirDieta" visible="false">
+         <children>
+            <StackPane maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.85" prefHeight="700.0" prefWidth="1200.0" styleClass="fondo">
+               <padding>
+                  <Insets bottom="18.0" right="18.0" />
+               </padding>
+            </StackPane>
+            <StackPane layoutX="410.0" layoutY="200.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" styleClass="fondo_blanco">
+               <children>
+                  <ComboBox fx:id="comboBoxElegirDieta" prefHeight="39.0" prefWidth="352.0" promptText="Selecciona una dieta" />
+                  <Label styleClass="letra_cabecera" text="Elegir dieta" StackPane.alignment="TOP_LEFT">
+                     <StackPane.margin>
+                        <Insets left="40.0" top="20.0" />
+                     </StackPane.margin>
+                  </Label>
+                  <Button mnemonicParsing="false" onMouseClicked="#clickElegirDieta" styleClass="boton_principal" text="Seleccionar" StackPane.alignment="BOTTOM_CENTER">
+                     <StackPane.margin>
+                        <Insets bottom="15.0" />
+                     </StackPane.margin>
+                     <padding>
+                        <Insets bottom="7.0" left="25.0" right="25.0" top="7.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </StackPane>
+         </children>
+      </Group>
+      <Group fx:id="groupDieta" visible="false">
+         <children>
+            <GridPane alignment="TOP_RIGHT" layoutX="18.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="663.0" prefWidth="1167.0" styleClass="fondo_blanco" AnchorPane.leftAnchor="18.0" AnchorPane.topAnchor="18.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="64.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="468.0" minHeight="10.0" prefHeight="465.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="160.0" minHeight="10.0" prefHeight="146.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label styleClass="letra_ventana" text="Crear dieta" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets left="45.0" top="11.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <ImageView fitHeight="26.0" fitWidth="26.0" onMouseClicked="#clickCerrarDieta" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                     <image>
+                        <Image url="@../iconos/Admin_Dashboard_Close_Icon_1.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets right="15.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <TableView fx:id="tablaDieta" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="450.0" prefWidth="1098.0" styleClass="tabla_dieta" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                    <columns>
+                      <TableColumn fx:id="colTipoComida" prefWidth="131.0" styleClass="tablaTipoComida" />
+                      <TableColumn fx:id="colLunes" prefWidth="136.5" text="Lunes" />
+                        <TableColumn fx:id="colMartes" prefWidth="136.5" styleClass="tabla_col_oscura" text="Martes" />
+                        <TableColumn fx:id="colMiercoles" prefWidth="136.5" text="Miércoles" />
+                        <TableColumn fx:id="colJueves" prefWidth="136.5" styleClass="tabla_col_oscura" text="Jueves" />
+                        <TableColumn fx:id="colViernes" prefWidth="136.5" text="Viernes" />
+                        <TableColumn fx:id="colSabado" prefWidth="136.5" styleClass="tabla_col_oscura" text="Sábado" />
+                        <TableColumn fx:id="colDomingo" prefWidth="136.5" text="Domingo" />
+                    </columns>
+                  </TableView>
+                  <TableView fx:id="tablaValorNutr" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="126.0" prefWidth="1098.0" styleClass="tabla_dieta" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                     <columns>
+                        <TableColumn fx:id="colValorNutr" prefWidth="131.0" styleClass="tabla_col_oscura" />
+                        <TableColumn fx:id="colLunes1" prefWidth="136.5" />
+                        <TableColumn fx:id="colMartes1" prefWidth="136.5" styleClass="tabla_col_oscura" />
+                        <TableColumn fx:id="colMiercoles1" prefWidth="136.5" />
+                        <TableColumn fx:id="colJueves1" prefWidth="136.5" styleClass="tabla_col_oscura" />
+                        <TableColumn fx:id="colViernes1" prefWidth="136.5" />
+                        <TableColumn fx:id="colSabado1" prefWidth="136.5" styleClass="tabla_col_oscura" />
+                        <TableColumn fx:id="colDomingo1" prefWidth="136.5" />
+                     </columns>
+                  </TableView>
+                  <ImageView fitHeight="3.0" fitWidth="1113.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                     <image>
+                        <Image url="@../iconos/Admin_Dashboard_Horizontal_Line_22.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </GridPane>
+         </children>
+      </Group>
+   </children>
+	<!--<children>
+		<VBox spacing="20" BorderPane.alignment="CENTER">
+			<VBox spacing="10">
+				<Label text="Nuevos clientes" style="-fx-font-size: 18px;"/>
+				<TableView fx:id="newClientsTable" maxWidth="400">
+					<columns>
+						<TableColumn text="Nombre" fx:id="nombreColumn">
+							<cellValueFactory><PropertyValueFactory property="nombre"/></cellValueFactory>
+						</TableColumn>
+						<TableColumn text="Correo" fx:id="correoColumn">
+							<cellValueFactory><PropertyValueFactory property="correo"/></cellValueFactory>
+						</TableColumn>
+					</columns>
+				</TableView>
+			</VBox>
+			<VBox spacing="10">
+				<Label text="Últimas reseñas" style="-fx-font-size: 18px;"/>
+				<VBox spacing="5">
+					<Label text="Juan López" style="-fx-font-size: 16px;"/>
+					<Label text="★★★★☆" style="-fx-font-size: 16px;"/>
+					<Label text="Sofía Martínez" style="-fx-font-size: 16px;"/>
+					<Label text="★★★☆☆" style="-fx-font-size: 16px;"/>
+					<Label text="María García" style="-fx-font-size: 16px;"/>
+					<Label text="★★★★☆" style="-fx-font-size: 16px;"/>
+					<Label text="Ana Torres" style="-fx-font-size: 16px;"/>
+					<Label text="★★☆☆☆" style="-fx-font-size: 16px;"/>
+					<Label text="Diego Rodríguez" style="-fx-font-size: 16px;"/>
+					<Label text="★★★★★" style="-fx-font-size: 16px;"/>
+				</VBox>
+			</VBox>
+			<VBox spacing="10">
+				<Label text="Alimentación" style="-fx-font-size: 18px;"/>
+				<Button text="Crear dieta" maxWidth="Infinity"/>
+				<Button text="Añadir receta" maxWidth="Infinity"/>
+				<Button text="Añadir alimento" maxWidth="Infinity"/>
+			</VBox>
+			<VBox spacing="10">
+				<Label text="Próxima consulta" style="-fx-font-size: 18px;"/>
+				<Button text="Agregar consulta" maxWidth="Infinity"/>
+			</VBox>
+			<VBox spacing="10">
+				<Label text="Últimas consultas" style="-fx-font-size: 18px;"/>
+				<TableView fx:id="lastConsultationsTable" maxWidth="400">
+					<columns>
+						<TableColumn text="Fecha" fx:id="fechaColumn">
+							<cellValueFactory><PropertyValueFactory property="fecha"/></cellValueFactory>
+						</TableColumn>
+						<TableColumn text="Hora" fx:id="horaColumn">
+							<cellValueFactory><PropertyValueFactory property="hora"/></cellValueFactory>
+						</TableColumn>
+						<TableColumn text="Cliente" fx:id="clienteColumn">
+							<cellValueFactory><PropertyValueFactory property="cliente"/></cellValueFactory>
+						</TableColumn>
+					</columns>
+				</TableView>
+			</VBox>
+		</VBox>
+	</children> -->
+</AnchorPane>
