@@ -7,6 +7,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.om.nutribalance.model.entities.*;
 
+import java.io.IOException;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -103,7 +104,8 @@ public class NutriModelCliente {
             }
 
             cliente.setGenero(jsonObject.getString("genero"));
-            cliente.setValoracion(jsonObject.getDouble("valoracion"));
+            if (!jsonObject.isNull("valoracion"))
+                cliente.setValoracion(jsonObject.getDouble("valoracion"));
 
             // Mapeo de progreso
             if (!jsonObject.isNull("progreso")) {
@@ -165,19 +167,19 @@ public class NutriModelCliente {
         }
         return listaClientes;
     }
-    public boolean borrarCliente(int id) {
+    public boolean borrarCliente(int id) throws IOException {
         HttpURLConnection conn = null;
         try {
             URL url = new URL("http://localhost:8080/nutribalance/clientes/" + id);
             conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("DELETE");
-            if (conn.getResponseCode() == 200)
+            if (conn.getResponseCode() == 200 || conn.getResponseCode() == 204)
                 return true;
             else if (conn.getResponseCode() == 404){
                 throw new RuntimeException("El cliente no existe");
             }
             else
-                throw new RuntimeException("Fallo de conexión");
+                throw new RuntimeException("Fallo de conexión " + conn.getResponseCode() +"\n" + conn.getResponseMessage());
         }
         catch(Exception e) {
             throw new RuntimeException(e.getMessage());
@@ -291,6 +293,36 @@ public class NutriModelCliente {
                 os.write(input, 0, input.length);
             }
             if (conn.getResponseCode() != 200)
+                throw new RuntimeException("Connection failed\n" + conn.getResponseCode() + " " + conn.getResponseMessage());
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
+        } finally {
+            if (conn != null)
+                conn.disconnect();
+        }
+    }
+    public boolean anadirCliente(Cliente cliente) {
+        HttpURLConnection conn = null;
+        String jsonInputString = new JSONObject()
+                .put("nombre", cliente.getNombre())
+                .put("email", cliente.getEmail())
+                .put("telefono", cliente.getTelefono())
+                .put("fechaNacimiento", cliente.getFechaNacimiento())
+                .put("genero", cliente.getGenero()).toString();
+        try {
+            URL url = new URL("http://localhost:8080/nutribalance/clientes");
+            conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("POST");
+            conn.setRequestProperty("Content-Type", "application/json;utf-8");
+            conn.setRequestProperty("Accept", "application/json");
+            conn.setDoOutput(true);
+            try (OutputStream os = conn.getOutputStream()) {
+                byte[] input = jsonInputString.getBytes(StandardCharsets.UTF_8);
+                os.write(input, 0, input.length);
+            }
+            if (conn.getResponseCode() == 200)
+                return true;
+            else
                 throw new RuntimeException("Connection failed\n" + conn.getResponseCode() + " " + conn.getResponseMessage());
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage());

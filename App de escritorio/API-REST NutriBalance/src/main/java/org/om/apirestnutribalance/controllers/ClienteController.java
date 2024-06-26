@@ -33,8 +33,8 @@ public class ClienteController {
     }
 
     @PostMapping
-    public Cliente createCliente(@RequestBody Cliente cliente) {
-        return clienteService.createCliente(cliente);
+    public void createCliente(@RequestBody Cliente cliente) {
+        clienteService.createCliente(cliente);
     }
 
     @DeleteMapping("/{id}")

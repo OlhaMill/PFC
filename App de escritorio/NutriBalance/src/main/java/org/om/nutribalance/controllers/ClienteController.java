@@ -13,6 +13,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
+import javafx.geometry.Side;
 import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -38,6 +39,7 @@ import org.om.nutribalance.util.TipoComida;
 import org.om.nutribalance.util.TipoComidaReceta;
 import org.om.nutribalance.util.ValorNutrPorSemana;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Period;
@@ -164,11 +166,21 @@ public class ClienteController {
     @FXML
     private TextField fieldDetalleAzucar;
     @FXML
+    private TextField fieldAnadirNombre;
+    @FXML
+    private TextField fieldAnadirCorreo;
+    @FXML
+    private TextField fieldAnadirTelefono;
+    @FXML
     private ComboBox<String> comboBoxGenero;
+    @FXML
+    private ComboBox<String> comboBoxAnadirGenero;
     @FXML
     private DatePicker datePickerFechaNac;
     @FXML
     private DatePicker datePickerFechaConsulta;
+    @FXML
+    private DatePicker datePickerAnadirFechaNac;
     @FXML
     private TableView<Consulta> tableDetalleConsultas;
     @FXML
@@ -182,11 +194,15 @@ public class ClienteController {
     @FXML
     private ImageView btnCerrarWidget3;
     @FXML
+    private ImageView imgAnadidoCliente;
+    @FXML
     private Button btnBajarPeso;
     @FXML
     private Button btnMejorarSalud;
     @FXML
     private Button btnSubirPeso;
+    @FXML
+    private Group groupAnadirCliente;
 
     @FXML
     public void initialize() {
@@ -215,18 +231,8 @@ public class ClienteController {
             Cliente cliente = cellData.getValue();
             return new ReadOnlyStringWrapper(cliente != null ? cliente.getTelefono() : "");
         });
-        List<Cliente> listaClientes = modelCliente.obtenerClientes(nutricionista_id);
-        ordenarClientesPorNombre(listaClientes);
-        ObservableList<Cliente> listaClientesObs = FXCollections.observableArrayList(listaClientes);
-        tablaClientes.setItems(listaClientesObs);
-        // Seleccionar la primera fila por defecto y asignar a la variable cliente
-        if (!listaClientesObs.isEmpty()) {
-            tablaClientes.getSelectionModel().selectFirst();
-            cliente = tablaClientes.getSelectionModel().getSelectedItem();
-            cargarDatosCliente(cliente);
-            cargarGrafico(cliente.getProgreso());
-            cargarConsultas(cliente.getProgreso());
-        }
+
+        actualizarListaClientes();
         tablaClientes.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             // Asigna el nuevo valor (fila seleccionada) a la variable
             cliente = newValue;
@@ -244,14 +250,35 @@ public class ClienteController {
             }
         });
         comboBoxGenero.setItems(FXCollections.observableArrayList("Femenino", "Masculino","Otro", "No identificado"));
+        comboBoxAnadirGenero.setItems(FXCollections.observableArrayList("Femenino", "Masculino","Otro", "No identificado"));
+    }
+    private void actualizarListaClientes(){
+        List<Cliente> listaClientes = modelCliente.obtenerClientes(nutricionista_id);
+        ordenarClientesPorNombre(listaClientes);
+        ObservableList<Cliente> listaClientesObs = FXCollections.observableArrayList(listaClientes);
+        tablaClientes.setItems(listaClientesObs);
+        // Seleccionar la primera fila por defecto y asignar a la variable cliente
+        if (!listaClientesObs.isEmpty()) {
+            tablaClientes.getSelectionModel().selectFirst();
+            cliente = tablaClientes.getSelectionModel().getSelectedItem();
+            cargarDatosCliente(cliente);
+            cargarGrafico(cliente.getProgreso());
+            cargarConsultas(cliente.getProgreso());
+        }
     }
     private void cargarDatosCliente(Cliente cliente){
         lblNombre.setText(cliente.getNombre());
         lblCorreo.setText(cliente.getEmail());
         lblTelefono.setText(cliente.getTelefono());
-        lblObjetivo.setText(cliente.getProgreso().get(0).getObjetivo());
-        lblPesoDeseado.setText("Peso deseado: " + cliente.getProgreso().get(0).getObjeivoPeso().toString() + " kg");
-        lblPesoActual.setText("Peso actual: " + cliente.getProgreso().get(0).getPeso().toString() + " kg");
+        if(!cliente.getProgreso().isEmpty()) {
+            lblObjetivo.setText(cliente.getProgreso().get(0).getObjetivo());
+            lblPesoDeseado.setText("Peso deseado: " + cliente.getProgreso().get(0).getObjeivoPeso().toString() + " kg");
+            lblPesoActual.setText("Peso actual: " + cliente.getProgreso().get(0).getPeso().toString() + " kg");
+        }else{
+            lblObjetivo.setText("-");
+            lblPesoDeseado.setText("Peso deseado: -");
+            lblPesoActual.setText("Peso actual: -");
+        }
         int edad = calcularEdad(cliente.getFechaNacimiento());
         lblEdad.setText(edad +" años");
     }
@@ -285,7 +312,7 @@ public class ClienteController {
         grafico.setVerticalGridLinesVisible(false);  // Oculta las líneas de cuadrícula verticales
         grafico.setHorizontalGridLinesVisible(true);  // Mostrar las líneas de cuadrícula horizontales
         grafico.setStyle("-fx-background-color: white;");  // Establecer el fondo en blanco
-        grafico.setCreateSymbols(false);
+        grafico.setCreateSymbols(true);
 
         // Crear las series de datos
         XYChart.Series<Number, Number> pesoSeries = new XYChart.Series<>();
@@ -302,6 +329,8 @@ public class ClienteController {
 
         // Agregar las series al gráfico
         grafico.getData().addAll(pesoSeries, imcSeries);
+        grafico.setLegendSide(Side.LEFT);
+        grafico.setLegendVisible(true);
 
         // Limpiar el contenedor anterior y agregar el gráfico
         graficoConteiner.getChildren().clear();
@@ -310,22 +339,28 @@ public class ClienteController {
     private void cargarConsultas(List<Consulta> listaConsultas) {
         vBoxConsultasFecha.getChildren().clear(); // Limpiar contenido anterior
         vBoxConsultasString.getChildren().clear();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        for (Consulta consulta : listaConsultas) {
-            String estado;
-            if (consulta.getFechaHora().atZone(java.time.ZoneId.systemDefault()).toLocalDate().isBefore(LocalDate.now())) {
-                estado = "Realizada";
-            } else {
-                estado = "No realizada";
+        if(!listaConsultas.isEmpty()) {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+            for (Consulta consulta : listaConsultas) {
+                String estado;
+                if (consulta.getFechaHora().atZone(java.time.ZoneId.systemDefault()).toLocalDate().isBefore(LocalDate.now())) {
+                    estado = "Realizada";
+                } else {
+                    estado = "No realizada";
+                }
+                Label estadoLabel = new Label(estado); // Ejemplo de etiqueta de estado
+                Label fechaLabel = new Label(formatter.format(consulta.getFechaHora().atZone(java.time.ZoneId.systemDefault()).toLocalDate()));
+                // Aplicar estilos CSS
+                estadoLabel.getStyleClass().add("tabla_letra");
+                fechaLabel.getStyleClass().add("tabla_letra");
+                estadoLabel.setPadding(new Insets(4));
+                fechaLabel.setPadding(new Insets(4)); // Espacio entre etiquetas
+                vBoxConsultasFecha.getChildren().add(fechaLabel);
+                vBoxConsultasString.getChildren().add(estadoLabel);
             }
-            Label estadoLabel = new Label(estado); // Ejemplo de etiqueta de estado
-            Label fechaLabel = new Label(formatter.format(consulta.getFechaHora().atZone(java.time.ZoneId.systemDefault()).toLocalDate()));
-            // Aplicar estilos CSS
-            estadoLabel.getStyleClass().add("tabla_letra");
-            fechaLabel.getStyleClass().add("tabla_letra");
-            estadoLabel.setPadding(new Insets(4));
-            fechaLabel.setPadding(new Insets(4)); // Espacio entre etiquetas
-            vBoxConsultasFecha.getChildren().add(fechaLabel);
+        }else{
+            Label estadoLabel = new Label("Sin consultas"); // Ejemplo de etiqueta de estado
+           estadoLabel.getStyleClass().add("tabla_letra");
             vBoxConsultasString.getChildren().add(estadoLabel);
         }
     }
@@ -726,6 +761,7 @@ public class ClienteController {
     private void clickBuscarCliente(){
         if(!fieldBarraBuscar.getText().isEmpty()) {
             String filtro = fieldBarraBuscar.getText().toLowerCase();
+            fieldBarraBuscar.setText("");
             List<Cliente> listaFiltrada = modelCliente.buscarClientes(filtro, nutricionista_id);
             ObservableList<Cliente> listaClientesObs = FXCollections.observableArrayList(listaFiltrada);
             tablaClientes.setItems(listaClientesObs);
@@ -761,9 +797,10 @@ public class ClienteController {
         groupBorrar.setVisible(false);
     }
     @FXML
-    protected void clickBorrarDef() {
+    protected void clickBorrarDef() throws IOException {
         boolean borrado = modelCliente.borrarCliente(cliente.getId());
         if(borrado){
+            actualizarListaClientes();
             stackBorrado.setVisible(true);
             // Create a timeline to hide the stackBorrado after 2 seconds
             Timeline timeline = new Timeline(new KeyFrame(
@@ -993,6 +1030,38 @@ public class ClienteController {
             botonDetalleObjetivo(3);
             cliente.getProgreso().get(0).setObjetivo("Subir peso");
         }
+    }
+
+    @FXML
+    protected void clickGuardarNuevoCliente() {
+        Cliente cliente = new Cliente();
+        cliente.setNombre(fieldAnadirNombre.getText());
+        cliente.setEmail(fieldAnadirCorreo.getText());
+        cliente.setTelefono(fieldAnadirTelefono.getText());
+        cliente.setFechaNacimiento(datePickerAnadirFechaNac.getValue());
+        cliente.setGenero(comboBoxAnadirGenero.getValue());
+        boolean anadido = modelCliente.anadirCliente(cliente);
+        if(anadido){
+            fieldAnadirNombre.setText("");
+            fieldAnadirCorreo.setText("");
+            fieldAnadirTelefono.setText("");
+            comboBoxAnadirGenero.setValue(null);
+            datePickerAnadirFechaNac.setValue(LocalDate.now());
+            imgAnadidoCliente.setVisible(true);
+            Timeline timeline = new Timeline(new KeyFrame(
+                    Duration.seconds(3),
+                    ae -> imgAnadidoCliente.setVisible(false)));
+            timeline.play();
+        }
+    }
+    @FXML
+    protected void clickAnadirCliente(){
+        groupAnadirCliente.setVisible(true);
+    }
+    @FXML
+    protected void clickCerrarAnadirCliente(){
+        groupAnadirCliente.setVisible(false);
+        actualizarListaClientes();
     }
 }
 

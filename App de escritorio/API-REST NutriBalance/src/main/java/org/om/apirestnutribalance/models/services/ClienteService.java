@@ -1,5 +1,6 @@
 package org.om.apirestnutribalance.models.services;
 
+import jakarta.transaction.Transactional;
 import org.om.apirestnutribalance.models.entities.Cliente;
 import org.om.apirestnutribalance.models.entities.DietaReceta;
 import org.om.apirestnutribalance.models.repositories.ClienteRepository;
@@ -26,11 +27,6 @@ public class ClienteService {
     public Optional<Cliente> getClienteById(Integer id) {
         return clienteRepository.findById(id);
     }
-
-    public Cliente createCliente(Cliente cliente) {
-        return clienteRepository.save(cliente);
-    }
-
     public void deleteCliente(Integer id) {
         clienteRepository.deleteById(id);
     }
@@ -54,5 +50,16 @@ public class ClienteService {
     }
     public Cliente save(Cliente cliente) {
         return clienteRepository.save(cliente);
+    }
+    @Transactional
+    public void createCliente(Cliente cliente) {
+        clienteRepository.insertCliente(
+                cliente.getNombre(),
+                cliente.getEmail(),
+                cliente.getTelefono(),
+                cliente.getFechaNacimiento(),
+                1,
+                cliente.getGenero()
+        );
     }
 }

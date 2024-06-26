@@ -308,7 +308,7 @@
                         <Insets left="15.0" top="13.0" />
                      </StackPane.margin>
                   </Label>
-                  <StackPane fx:id="graficoConteiner" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="106.0" prefWidth="485.0" StackPane.alignment="BOTTOM_CENTER">
+                  <StackPane fx:id="graficoConteiner" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="106.0" prefWidth="507.0" StackPane.alignment="BOTTOM_LEFT">
                      <StackPane.margin>
                         <Insets />
                      </StackPane.margin>
@@ -340,11 +340,11 @@
                         <Insets bottom="10.0" />
                      </StackPane.margin>
                   </ListView>
-                  <TableView fx:id="tablaClientes" cacheShape="false" centerShape="false" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="438.0" prefWidth="499.0" scaleShape="false" styleClass="tabla_letra" StackPane.alignment="BOTTOM_CENTER">
+                  <TableView fx:id="tablaClientes" cacheShape="false" centerShape="false" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="438.0" prefWidth="495.0" scaleShape="false" styleClass="tabla_letra" StackPane.alignment="BOTTOM_CENTER">
                     <columns>
                       <TableColumn fx:id="colNombre" prefWidth="176.0" text="Nombre" />
-                      <TableColumn fx:id="colCorreo" prefWidth="182.0" text="Correo" />
-                        <TableColumn fx:id="colTelefono" prefWidth="134.0" text="Teléfono" />
+                      <TableColumn fx:id="colCorreo" prefWidth="193.0" text="Correo" />
+                        <TableColumn fx:id="colTelefono" prefWidth="120.0" text="Teléfono" />
                     </columns>
                      <StackPane.margin>
                         <Insets bottom="10.0" />
@@ -444,7 +444,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button mnemonicParsing="false" styleClass="boton_principal" text="Añadir" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+            <Button mnemonicParsing="false" onMouseClicked="#clickAnadirCliente" styleClass="boton_principal" text="Añadir" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
                <padding>
                   <Insets bottom="8.0" left="38.0" right="38.5" top="8.0" />
                </padding>
@@ -548,14 +548,14 @@
                   </ImageView>
                   <TableView fx:id="tablaDieta" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="450.0" prefWidth="1098.0" styleClass="tabla_dieta" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
                      <columns>
-                        <TableColumn fx:id="colTipoComida" prefWidth="131.0" styleClass="tablaTipoComida" />
-                        <TableColumn fx:id="colLunes" prefWidth="136.5" text="Lunes" />
-                        <TableColumn fx:id="colMartes" prefWidth="136.5" styleClass="tabla_col_oscura" text="Martes" />
-                        <TableColumn fx:id="colMiercoles" prefWidth="136.5" text="Miércoles" />
-                        <TableColumn fx:id="colJueves" prefWidth="136.5" styleClass="tabla_col_oscura" text="Jueves" />
-                        <TableColumn fx:id="colViernes" prefWidth="136.5" text="Viernes" />
-                        <TableColumn fx:id="colSabado" prefWidth="136.5" styleClass="tabla_col_oscura" text="Sábado" />
-                        <TableColumn fx:id="colDomingo" prefWidth="136.5" text="Domingo" />
+                        <TableColumn fx:id="colTipoComida" prefWidth="135.0" styleClass="tablaTipoComida" />
+                        <TableColumn fx:id="colLunes" prefWidth="137.0" text="Lunes" />
+                        <TableColumn fx:id="colMartes" prefWidth="137.0" styleClass="tabla_col_oscura" text="Martes" />
+                        <TableColumn fx:id="colMiercoles" prefWidth="137.0" text="Miércoles" />
+                        <TableColumn fx:id="colJueves" prefWidth="137.0" styleClass="tabla_col_oscura" text="Jueves" />
+                        <TableColumn fx:id="colViernes" prefWidth="137.0" text="Viernes" />
+                        <TableColumn fx:id="colSabado" prefWidth="137.0" styleClass="tabla_col_oscura" text="Sábado" />
+                        <TableColumn fx:id="colDomingo" prefWidth="137.0" text="Domingo" />
                      </columns>
                   </TableView>
                   <TableView fx:id="tablaValorNutr" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="126.0" prefWidth="1098.0" styleClass="tabla_dieta" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
@@ -1124,6 +1124,159 @@
                </cursor>
                <image>
                   <Image url="@../iconos/Admin_Dashboard_selection%20(4).png" />
+               </image>
+            </ImageView>
+         </children>
+      </Group>
+      <Group fx:id="groupAnadirCliente" visible="false">
+         <children>
+            <StackPane maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.85" prefHeight="700.0" prefWidth="1200.0" styleClass="fondo">
+               <padding>
+                  <Insets bottom="18.0" right="18.0" />
+               </padding>
+            </StackPane>
+            <GridPane alignment="CENTER" layoutX="230.0" layoutY="140.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="750.0" styleClass="fondo_blanco" AnchorPane.leftAnchor="18.0" AnchorPane.topAnchor="18.0">
+               <children>
+                  <Label fx:id="lblNombrePestana1" styleClass="letra_ventana" text="Añadir Cliente" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets left="45.0" top="11.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <ImageView fitHeight="26.0" fitWidth="26.0" onMouseClicked="#clickCerrarAnadirCliente" pickOnBounds="true" preserveRatio="true" styleClass="aumentar" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <image>
+                        <Image url="@../iconos/Admin_Dashboard_Close_Icon_1.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets right="15.0" />
+                     </GridPane.margin>
+                  </ImageView>
+                  <GridPane GridPane.rowIndex="1">
+                     <children>
+                        <GridPane>
+                           <children>
+                              <StackPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="250.0" prefWidth="700.0" styleClass="stack_semiredondo" GridPane.halignment="CENTER">
+                                 <children>
+                                    <Label alignment="BOTTOM_LEFT" prefHeight="27.0" prefWidth="214.0" styleClass="letra_widget_nombre" text="Información personal" StackPane.alignment="TOP_LEFT">
+                                       <StackPane.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </StackPane.margin>
+                                    </Label>
+                                    <GridPane alignment="BOTTOM_CENTER" maxWidth="-Infinity" prefHeight="174.0" prefWidth="660.0" StackPane.alignment="BOTTOM_CENTER">
+                                       <children>
+                                          <Label styleClass="letra_cliente" text="Nombre*" />
+                                          <Label styleClass="letra_cliente" text="Correo*" GridPane.rowIndex="2" />
+                                          <Label styleClass="letra_cliente" text="Teléfono*" GridPane.rowIndex="4" />
+                                          <Label styleClass="letra_cliente" text="Género" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <GridPane.margin>
+                                                <Insets />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label styleClass="letra_cliente" text="Fecha de nacimiento*" GridPane.columnIndex="1" />
+                                          <TextField fx:id="fieldAnadirNombre" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="285.0" promptText="Ana" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" />
+                                             </GridPane.margin>
+                                          </TextField>
+                                          <TextField fx:id="fieldAnadirCorreo" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="285.0" promptText="anatorres@example.com" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" />
+                                             </GridPane.margin>
+                                          </TextField>
+                                          <TextField fx:id="fieldAnadirTelefono" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="285.0" promptText="+34 600 100 200" GridPane.rowIndex="5" GridPane.valignment="TOP">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" />
+                                             </GridPane.margin>
+                                          </TextField>
+                                          <ComboBox fx:id="comboBoxAnadirGenero" maxWidth="-Infinity" prefWidth="285.0" promptText="Seleccione un valor" styleClass="combo_box" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" />
+                                             </GridPane.margin>
+                                          </ComboBox>
+                                          <DatePicker fx:id="datePickerAnadirFechaNac" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="285.0" promptText="dd/mm/yyyy" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" />
+                                             </GridPane.margin>
+                                          </DatePicker>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <StackPane.margin>
+                                          <Insets bottom="20.0" />
+                                       </StackPane.margin>
+                                    </GridPane>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" />
+                                 </GridPane.margin>
+                              </StackPane>
+                              <HBox alignment="TOP_CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <children>
+                                    <Button mnemonicParsing="false" styleClass="boton_principal" text="Añadir más información" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                                       <GridPane.margin>
+                                          <Insets top="10.0" />
+                                       </GridPane.margin>
+                                       <padding>
+                                          <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onMouseClicked="#clickGuardarNuevoCliente" styleClass="boton_principal" text="Guardar cliente">
+                                       <padding>
+                                          <Insets bottom="10.0" left="45.0" right="45.0" top="10.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="290.0" minHeight="10.0" prefHeight="226.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="363.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="842.0" minWidth="10.0" prefWidth="765.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="64.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="589.0" minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <ImageView fx:id="imgAnadidoCliente" fitHeight="150.0" fitWidth="50.0" layoutX="870.0" layoutY="470.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../iconos/check-mark.png" />
                </image>
             </ImageView>
          </children>

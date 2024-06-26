@@ -63,7 +63,8 @@ public class NutriModelPrincipal {
                     }
 
                     cliente.setGenero(jsonObject.getString("genero"));
-                    cliente.setValoracion(jsonObject.getDouble("valoracion"));
+                    if (!jsonObject.isNull("valoracion"))
+                        cliente.setValoracion(jsonObject.getDouble("valoracion"));
 
                     listaClientes.add(cliente);
                 }
@@ -93,13 +94,19 @@ public class NutriModelPrincipal {
                 Scanner scanner = new Scanner(conn.getInputStream());
                 String response = scanner.useDelimiter("\\A").next();
                 scanner.close();
-
+                int count = 0;
                 JSONArray jsonArray = new JSONArray(response);
                 for (int i = 0; i < jsonArray.length(); i++) {
+                    if (count >= 5) {
+                        break; // Salir del bucle si ya se han añadido cinco registros
+                    }
                     JSONObject jsonObject = jsonArray.getJSONObject(i);
                     String nombre = jsonObject.getString("nombre");
-                    double valoracion = jsonObject.getDouble("valoracion");
-                    valoracionesMap.put(valoracion, nombre);
+                    if (jsonObject.has("valoracion") && !jsonObject.isNull("valoracion")) {
+                        double valoracion = jsonObject.getDouble("valoracion");
+                        valoracionesMap.put(valoracion, nombre);
+                        count++;
+                    }
                 }
             } else {
                 throw new RuntimeException("Error: " + conn.getResponseCode() + " " + conn.getResponseMessage());
